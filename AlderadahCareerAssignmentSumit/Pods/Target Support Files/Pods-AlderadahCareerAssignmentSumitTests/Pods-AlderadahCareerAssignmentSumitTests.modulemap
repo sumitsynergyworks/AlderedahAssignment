@@ -1,0 +1,6 @@
+framework module Pods_AlderadahCareerAssignmentSumitTests {
+  umbrella header "Pods-AlderadahCareerAssignmentSumitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1012 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180868B228C670A200A5DAE6 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180868B128C670A200A5DAE6 /* DashboardVC.swift */; };
+		180868B428C70C9200A5DAE6 /* ViewResumeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180868B328C70C9200A5DAE6 /* ViewResumeVC.swift */; };
+		1871D00F28C623CF00234876 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D00E28C623CF00234876 /* Application.swift */; };
+		1871D01228C6536E00234876 /* ApplicationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D01028C6536E00234876 /* ApplicationTableCell.swift */; };
+		1871D01328C6536E00234876 /* ApplicationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1871D01128C6536E00234876 /* ApplicationTableCell.xib */; };
+		1891D26228C38B200078E34A /* DBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26128C38B200078E34A /* DBExtension.swift */; };
+		1891D26428C491D60078E34A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26328C491D60078E34A /* SignupVC.swift */; };
+		1891D26628C493F80078E34A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26528C493F80078E34A /* BaseViewController.swift */; };
+		1891D26928C4942B0078E34A /* ASButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26828C4942B0078E34A /* ASButton.swift */; };
+		1891D26D28C4962F0078E34A /* ASView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26C28C4962F0078E34A /* ASView.swift */; };
+		1891D26F28C497340078E34A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D26E28C497340078E34A /* AppConstants.swift */; };
+		1891D27128C49A400078E34A /* ParseKeyboardNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27028C49A400078E34A /* ParseKeyboardNotification.swift */; };
+		1891D27428C4BE740078E34A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27328C4BE740078E34A /* User.swift */; };
+		1891D27628C4FCC80078E34A /* ASShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27528C4FCC70078E34A /* ASShared.swift */; };
+		1891D27928C5042F0078E34A /* ApplyJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27828C5042F0078E34A /* ApplyJobVC.swift */; };
+		1891D27B28C504460078E34A /* MyApplicationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27A28C504460078E34A /* MyApplicationsVC.swift */; };
+		1891D27E28C504C90078E34A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27D28C504C90078E34A /* BaseNavigationController.swift */; };
+		1891D28028C505170078E34A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D27F28C505170078E34A /* BaseTabBarController.swift */; };
+		1891D28228C5BD660078E34A /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D28128C5BD660078E34A /* ColorScheme.swift */; };
+		1891D28428C5C4CC0078E34A /* ApplicationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D28328C5C4CC0078E34A /* ApplicationEnums.swift */; };
+		1891D28628C5C9460078E34A /* TextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D28528C5C9460078E34A /* TextfieldCell.swift */; };
+		1891D28828C5C95D0078E34A /* SelectButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D28728C5C95D0078E34A /* SelectButtonCell.swift */; };
+		1891D29728C5DA5C0078E34A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29628C5DA5C0078E34A /* BaseTableViewCell.swift */; };
+		1891D29A28C5E1480078E34A /* JobApplications+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29828C5E1480078E34A /* JobApplications+CoreDataClass.swift */; };
+		1891D29B28C5E1480078E34A /* JobApplications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29928C5E1480078E34A /* JobApplications+CoreDataProperties.swift */; };
+		1891D29D28C5E71B0078E34A /* SkillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29C28C5E71B0078E34A /* SkillsVC.swift */; };
+		1891D29F28C6092A0078E34A /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29E28C6092A0078E34A /* UploadFileResponse.swift */; };
+		18F30D6928C3629700662EB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6828C3629700662EB4 /* AppDelegate.swift */; };
+		18F30D6B28C3629700662EB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6A28C3629700662EB4 /* SceneDelegate.swift */; };
+		18F30D6D28C3629700662EB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6C28C3629700662EB4 /* LoginVC.swift */; };
+		18F30D7028C3629700662EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F30D6E28C3629700662EB4 /* Main.storyboard */; };
+		18F30D7328C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D7128C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodeld */; };
+		18F30D7528C3629900662EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F30D7428C3629900662EB4 /* Assets.xcassets */; };
+		18F30D7828C3629A00662EB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F30D7628C3629900662EB4 /* LaunchScreen.storyboard */; };
+		18F30D8328C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D8228C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift */; };
+		18F30D8D28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D8C28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.swift */; };
+		18F30D8F28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D8E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITestsLaunchTests.swift */; };
+		18F30DAC28C3640E00662EB4 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DAB28C3640E00662EB4 /* DBManager.swift */; };
+		18F30DAE28C364AC00662EB4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DAD28C364AC00662EB4 /* StringConstants.swift */; };
+		18F30DB128C367A800662EB4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DB028C367A800662EB4 /* NetworkHelper.swift */; };
+		18F30DB328C371E600662EB4 /* WebRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DB228C371E600662EB4 /* WebRequests.swift */; };
+		18F30DB528C378B400662EB4 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DB428C378B400662EB4 /* AlertManager.swift */; };
+		18F30DC828C3880800662EB4 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DC628C3880800662EB4 /* Users+CoreDataClass.swift */; };
+		18F30DC928C3880800662EB4 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30DC728C3880800662EB4 /* Users+CoreDataProperties.swift */; };
+		30E65252612F12DB1FFCEBC3 /* Pods_AlderadahCareerAssignmentSumit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E904F64C5F9396F0EAC253D /* Pods_AlderadahCareerAssignmentSumit.framework */; };
+		4AD385F28AC80EDE27DFE23D /* Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBFBD3785B4555B1AB924B /* Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework */; };
+		EC215B85E456BFA3116FD6B9 /* Pods_AlderadahCareerAssignmentSumitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6DFF062689724B9CC88615 /* Pods_AlderadahCareerAssignmentSumitTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18F30D7F28C3629A00662EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F30D5D28C3629700662EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F30D6428C3629700662EB4;
+			remoteInfo = AlderadahCareerAssignmentSumit;
+		};
+		18F30D8928C3629A00662EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F30D5D28C3629700662EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F30D6428C3629700662EB4;
+			remoteInfo = AlderadahCareerAssignmentSumit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0934AD5049EFD5E8D231904B /* Pods-AlderadahCareerAssignmentSumitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumitTests.release.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumitTests/Pods-AlderadahCareerAssignmentSumitTests.release.xcconfig"; sourceTree = "<group>"; };
+		180868B128C670A200A5DAE6 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		180868B328C70C9200A5DAE6 /* ViewResumeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewResumeVC.swift; sourceTree = "<group>"; };
+		1871D00E28C623CF00234876 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		1871D01028C6536E00234876 /* ApplicationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTableCell.swift; sourceTree = "<group>"; };
+		1871D01128C6536E00234876 /* ApplicationTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplicationTableCell.xib; sourceTree = "<group>"; };
+		1891D26128C38B200078E34A /* DBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBExtension.swift; sourceTree = "<group>"; };
+		1891D26328C491D60078E34A /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		1891D26528C493F80078E34A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1891D26828C4942B0078E34A /* ASButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASButton.swift; sourceTree = "<group>"; };
+		1891D26C28C4962F0078E34A /* ASView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASView.swift; sourceTree = "<group>"; };
+		1891D26E28C497340078E34A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1891D27028C49A400078E34A /* ParseKeyboardNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseKeyboardNotification.swift; sourceTree = "<group>"; };
+		1891D27328C4BE740078E34A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1891D27528C4FCC70078E34A /* ASShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASShared.swift; sourceTree = "<group>"; };
+		1891D27828C5042F0078E34A /* ApplyJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyJobVC.swift; sourceTree = "<group>"; };
+		1891D27A28C504460078E34A /* MyApplicationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationsVC.swift; sourceTree = "<group>"; };
+		1891D27D28C504C90078E34A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		1891D27F28C505170078E34A /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		1891D28128C5BD660078E34A /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		1891D28328C5C4CC0078E34A /* ApplicationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationEnums.swift; sourceTree = "<group>"; };
+		1891D28528C5C9460078E34A /* TextfieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldCell.swift; sourceTree = "<group>"; };
+		1891D28728C5C95D0078E34A /* SelectButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButtonCell.swift; sourceTree = "<group>"; };
+		1891D29628C5DA5C0078E34A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		1891D29828C5E1480078E34A /* JobApplications+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JobApplications+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1891D29928C5E1480078E34A /* JobApplications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JobApplications+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1891D29C28C5E71B0078E34A /* SkillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsVC.swift; sourceTree = "<group>"; };
+		1891D29E28C6092A0078E34A /* UploadFileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileResponse.swift; sourceTree = "<group>"; };
+		18F30D6528C3629700662EB4 /* AlderadahCareerAssignmentSumit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlderadahCareerAssignmentSumit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F30D6828C3629700662EB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18F30D6A28C3629700662EB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18F30D6C28C3629700662EB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		18F30D6F28C3629700662EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18F30D7228C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlderadahCareerAssignmentSumit.xcdatamodel; sourceTree = "<group>"; };
+		18F30D7428C3629900662EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18F30D7728C3629900662EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18F30D7928C3629A00662EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F30D7E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlderadahCareerAssignmentSumitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F30D8228C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlderadahCareerAssignmentSumitTests.swift; sourceTree = "<group>"; };
+		18F30D8828C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlderadahCareerAssignmentSumitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F30D8C28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlderadahCareerAssignmentSumitUITests.swift; sourceTree = "<group>"; };
+		18F30D8E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlderadahCareerAssignmentSumitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18F30DAB28C3640E00662EB4 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		18F30DAD28C364AC00662EB4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		18F30DB028C367A800662EB4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		18F30DB228C371E600662EB4 /* WebRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequests.swift; sourceTree = "<group>"; };
+		18F30DB428C378B400662EB4 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		18F30DC628C3880800662EB4 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18F30DC728C3880800662EB4 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E904F64C5F9396F0EAC253D /* Pods_AlderadahCareerAssignmentSumit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlderadahCareerAssignmentSumit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70EBFBD3785B4555B1AB924B /* Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F655A58A99932CB8142CBC7 /* Pods-AlderadahCareerAssignmentSumit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumit.release.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumit/Pods-AlderadahCareerAssignmentSumit.release.xcconfig"; sourceTree = "<group>"; };
+		9AEEAA11238D111A27BE43EF /* Pods-AlderadahCareerAssignmentSumitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumitTests.debug.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumitTests/Pods-AlderadahCareerAssignmentSumitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC6DFF062689724B9CC88615 /* Pods_AlderadahCareerAssignmentSumitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlderadahCareerAssignmentSumitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8053C3D3A48FD32AA1FDD6D /* Pods-AlderadahCareerAssignmentSumit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumit.debug.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumit/Pods-AlderadahCareerAssignmentSumit.debug.xcconfig"; sourceTree = "<group>"; };
+		DFBEBDCED9B04572F895928A /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.release.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FAD5DF094887CCEC54F8C0B9 /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18F30D6228C3629700662EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E65252612F12DB1FFCEBC3 /* Pods_AlderadahCareerAssignmentSumit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D7B28C3629A00662EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC215B85E456BFA3116FD6B9 /* Pods_AlderadahCareerAssignmentSumitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D8528C3629A00662EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD385F28AC80EDE27DFE23D /* Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180868B028C6707500A5DAE6 /* AdminVC */ = {
+			isa = PBXGroup;
+			children = (
+				180868B128C670A200A5DAE6 /* DashboardVC.swift */,
+			);
+			path = AdminVC;
+			sourceTree = "<group>";
+		};
+		1891D26728C4940A0078E34A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1891D26828C4942B0078E34A /* ASButton.swift */,
+				1891D26C28C4962F0078E34A /* ASView.swift */,
+				1891D28528C5C9460078E34A /* TextfieldCell.swift */,
+				1891D28728C5C95D0078E34A /* SelectButtonCell.swift */,
+				1891D29628C5DA5C0078E34A /* BaseTableViewCell.swift */,
+				1871D01028C6536E00234876 /* ApplicationTableCell.swift */,
+				1871D01128C6536E00234876 /* ApplicationTableCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1891D27228C4BE310078E34A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1891D27328C4BE740078E34A /* User.swift */,
+				1891D28328C5C4CC0078E34A /* ApplicationEnums.swift */,
+				1891D29E28C6092A0078E34A /* UploadFileResponse.swift */,
+				1871D00E28C623CF00234876 /* Application.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1891D27728C503B10078E34A /* UserVC */ = {
+			isa = PBXGroup;
+			children = (
+				1891D27828C5042F0078E34A /* ApplyJobVC.swift */,
+				1891D29C28C5E71B0078E34A /* SkillsVC.swift */,
+				1891D27A28C504460078E34A /* MyApplicationsVC.swift */,
+			);
+			path = UserVC;
+			sourceTree = "<group>";
+		};
+		1891D27C28C504AD0078E34A /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1891D26528C493F80078E34A /* BaseViewController.swift */,
+				1891D27D28C504C90078E34A /* BaseNavigationController.swift */,
+				1891D27F28C505170078E34A /* BaseTabBarController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		1891D28928C5C9E30078E34A /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				1891D29828C5E1480078E34A /* JobApplications+CoreDataClass.swift */,
+				1891D29928C5E1480078E34A /* JobApplications+CoreDataProperties.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		18F30D5C28C3629700662EB4 = {
+			isa = PBXGroup;
+			children = (
+				18F30D6728C3629700662EB4 /* AlderadahCareerAssignmentSumit */,
+				18F30D8128C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests */,
+				18F30D8B28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests */,
+				18F30D6628C3629700662EB4 /* Products */,
+				A33EDC94B03D68CF2DE9D669 /* Pods */,
+				F84303BE93D55DC2441BCF0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18F30D6628C3629700662EB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F30D6528C3629700662EB4 /* AlderadahCareerAssignmentSumit.app */,
+				18F30D7E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.xctest */,
+				18F30D8828C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18F30D6728C3629700662EB4 /* AlderadahCareerAssignmentSumit */ = {
+			isa = PBXGroup;
+			children = (
+				1891D27228C4BE310078E34A /* Models */,
+				1891D26728C4940A0078E34A /* Views */,
+				18F30D9F28C362FA00662EB4 /* DBLayer */,
+				18F30D9E28C362E400662EB4 /* Network */,
+				18F30D9C28C362CF00662EB4 /* Utilities */,
+				18F30D9B28C362C600662EB4 /* VCs */,
+				18F30D6828C3629700662EB4 /* AppDelegate.swift */,
+				18F30D6A28C3629700662EB4 /* SceneDelegate.swift */,
+				18F30D6E28C3629700662EB4 /* Main.storyboard */,
+				18F30D7428C3629900662EB4 /* Assets.xcassets */,
+				18F30D7628C3629900662EB4 /* LaunchScreen.storyboard */,
+				18F30D7928C3629A00662EB4 /* Info.plist */,
+				18F30D7128C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodeld */,
+			);
+			path = AlderadahCareerAssignmentSumit;
+			sourceTree = "<group>";
+		};
+		18F30D8128C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests */ = {
+			isa = PBXGroup;
+			children = (
+				18F30D8228C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift */,
+			);
+			path = AlderadahCareerAssignmentSumitTests;
+			sourceTree = "<group>";
+		};
+		18F30D8B28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18F30D8C28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.swift */,
+				18F30D8E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITestsLaunchTests.swift */,
+			);
+			path = AlderadahCareerAssignmentSumitUITests;
+			sourceTree = "<group>";
+		};
+		18F30D9B28C362C600662EB4 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				1891D27C28C504AD0078E34A /* BaseControllers */,
+				18F30D6C28C3629700662EB4 /* LoginVC.swift */,
+				1891D26328C491D60078E34A /* SignupVC.swift */,
+				1891D27728C503B10078E34A /* UserVC */,
+				180868B028C6707500A5DAE6 /* AdminVC */,
+				180868B328C70C9200A5DAE6 /* ViewResumeVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		18F30D9C28C362CF00662EB4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				18F30DB428C378B400662EB4 /* AlertManager.swift */,
+				18F30DAD28C364AC00662EB4 /* StringConstants.swift */,
+				1891D26E28C497340078E34A /* AppConstants.swift */,
+				1891D27028C49A400078E34A /* ParseKeyboardNotification.swift */,
+				1891D27528C4FCC70078E34A /* ASShared.swift */,
+				1891D28128C5BD660078E34A /* ColorScheme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18F30D9E28C362E400662EB4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18F30DAF28C3678F00662EB4 /* NetworkLayer */,
+				18F30DB228C371E600662EB4 /* WebRequests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		18F30D9F28C362FA00662EB4 /* DBLayer */ = {
+			isa = PBXGroup;
+			children = (
+				18F30DAB28C3640E00662EB4 /* DBManager.swift */,
+				1891D26128C38B200078E34A /* DBExtension.swift */,
+				18F30DA028C3636D00662EB4 /* DBEntities */,
+			);
+			path = DBLayer;
+			sourceTree = "<group>";
+		};
+		18F30DA028C3636D00662EB4 /* DBEntities */ = {
+			isa = PBXGroup;
+			children = (
+				1891D28928C5C9E30078E34A /* Applications */,
+				18F30DA628C363C000662EB4 /* Users */,
+			);
+			path = DBEntities;
+			sourceTree = "<group>";
+		};
+		18F30DA628C363C000662EB4 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				18F30DC628C3880800662EB4 /* Users+CoreDataClass.swift */,
+				18F30DC728C3880800662EB4 /* Users+CoreDataProperties.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		18F30DAF28C3678F00662EB4 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				18F30DB028C367A800662EB4 /* NetworkHelper.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		A33EDC94B03D68CF2DE9D669 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8053C3D3A48FD32AA1FDD6D /* Pods-AlderadahCareerAssignmentSumit.debug.xcconfig */,
+				7F655A58A99932CB8142CBC7 /* Pods-AlderadahCareerAssignmentSumit.release.xcconfig */,
+				FAD5DF094887CCEC54F8C0B9 /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.debug.xcconfig */,
+				DFBEBDCED9B04572F895928A /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.release.xcconfig */,
+				9AEEAA11238D111A27BE43EF /* Pods-AlderadahCareerAssignmentSumitTests.debug.xcconfig */,
+				0934AD5049EFD5E8D231904B /* Pods-AlderadahCareerAssignmentSumitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F84303BE93D55DC2441BCF0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E904F64C5F9396F0EAC253D /* Pods_AlderadahCareerAssignmentSumit.framework */,
+				70EBFBD3785B4555B1AB924B /* Pods_AlderadahCareerAssignmentSumit_AlderadahCareerAssignmentSumitUITests.framework */,
+				AC6DFF062689724B9CC88615 /* Pods_AlderadahCareerAssignmentSumitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18F30D6428C3629700662EB4 /* AlderadahCareerAssignmentSumit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F30D9228C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumit" */;
+			buildPhases = (
+				DC0059BBB43C3DA42D2856EF /* [CP] Check Pods Manifest.lock */,
+				18F30D6128C3629700662EB4 /* Sources */,
+				18F30D6228C3629700662EB4 /* Frameworks */,
+				18F30D6328C3629700662EB4 /* Resources */,
+				AFDC43DCF629A26DDA028667 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlderadahCareerAssignmentSumit;
+			productName = AlderadahCareerAssignmentSumit;
+			productReference = 18F30D6528C3629700662EB4 /* AlderadahCareerAssignmentSumit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18F30D7D28C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F30D9528C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumitTests" */;
+			buildPhases = (
+				42F657E663A0FC4C4C28E609 /* [CP] Check Pods Manifest.lock */,
+				18F30D7A28C3629A00662EB4 /* Sources */,
+				18F30D7B28C3629A00662EB4 /* Frameworks */,
+				18F30D7C28C3629A00662EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F30D8028C3629A00662EB4 /* PBXTargetDependency */,
+			);
+			name = AlderadahCareerAssignmentSumitTests;
+			productName = AlderadahCareerAssignmentSumitTests;
+			productReference = 18F30D7E28C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18F30D8728C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F30D9828C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumitUITests" */;
+			buildPhases = (
+				AED146AAB9F9536E0CC7A4E4 /* [CP] Check Pods Manifest.lock */,
+				18F30D8428C3629A00662EB4 /* Sources */,
+				18F30D8528C3629A00662EB4 /* Frameworks */,
+				18F30D8628C3629A00662EB4 /* Resources */,
+				EFBD22C841F6B7127B12F373 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F30D8A28C3629A00662EB4 /* PBXTargetDependency */,
+			);
+			name = AlderadahCareerAssignmentSumitUITests;
+			productName = AlderadahCareerAssignmentSumitUITests;
+			productReference = 18F30D8828C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18F30D5D28C3629700662EB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					18F30D6428C3629700662EB4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					18F30D7D28C3629A00662EB4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 18F30D6428C3629700662EB4;
+					};
+					18F30D8728C3629A00662EB4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 18F30D6428C3629700662EB4;
+					};
+				};
+			};
+			buildConfigurationList = 18F30D6028C3629700662EB4 /* Build configuration list for PBXProject "AlderadahCareerAssignmentSumit" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18F30D5C28C3629700662EB4;
+			productRefGroup = 18F30D6628C3629700662EB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18F30D6428C3629700662EB4 /* AlderadahCareerAssignmentSumit */,
+				18F30D7D28C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests */,
+				18F30D8728C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18F30D6328C3629700662EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F30D7828C3629A00662EB4 /* LaunchScreen.storyboard in Resources */,
+				1871D01328C6536E00234876 /* ApplicationTableCell.xib in Resources */,
+				18F30D7528C3629900662EB4 /* Assets.xcassets in Resources */,
+				18F30D7028C3629700662EB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D7C28C3629A00662EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D8628C3629A00662EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42F657E663A0FC4C4C28E609 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlderadahCareerAssignmentSumitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AED146AAB9F9536E0CC7A4E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFDC43DCF629A26DDA028667 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit/Pods-AlderadahCareerAssignmentSumit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit/Pods-AlderadahCareerAssignmentSumit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit/Pods-AlderadahCareerAssignmentSumit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC0059BBB43C3DA42D2856EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlderadahCareerAssignmentSumit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFBD22C841F6B7127B12F373 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests/Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18F30D6128C3629700662EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180868B428C70C9200A5DAE6 /* ViewResumeVC.swift in Sources */,
+				1891D27E28C504C90078E34A /* BaseNavigationController.swift in Sources */,
+				18F30DB128C367A800662EB4 /* NetworkHelper.swift in Sources */,
+				1871D00F28C623CF00234876 /* Application.swift in Sources */,
+				1891D26F28C497340078E34A /* AppConstants.swift in Sources */,
+				18F30D6D28C3629700662EB4 /* LoginVC.swift in Sources */,
+				1891D29A28C5E1480078E34A /* JobApplications+CoreDataClass.swift in Sources */,
+				1891D26928C4942B0078E34A /* ASButton.swift in Sources */,
+				1891D27628C4FCC80078E34A /* ASShared.swift in Sources */,
+				1891D28228C5BD660078E34A /* ColorScheme.swift in Sources */,
+				18F30D6928C3629700662EB4 /* AppDelegate.swift in Sources */,
+				1891D27128C49A400078E34A /* ParseKeyboardNotification.swift in Sources */,
+				1891D28028C505170078E34A /* BaseTabBarController.swift in Sources */,
+				1891D28628C5C9460078E34A /* TextfieldCell.swift in Sources */,
+				180868B228C670A200A5DAE6 /* DashboardVC.swift in Sources */,
+				18F30D7328C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodeld in Sources */,
+				1891D27928C5042F0078E34A /* ApplyJobVC.swift in Sources */,
+				18F30DAE28C364AC00662EB4 /* StringConstants.swift in Sources */,
+				1891D26D28C4962F0078E34A /* ASView.swift in Sources */,
+				1891D26628C493F80078E34A /* BaseViewController.swift in Sources */,
+				18F30DC928C3880800662EB4 /* Users+CoreDataProperties.swift in Sources */,
+				1891D29B28C5E1480078E34A /* JobApplications+CoreDataProperties.swift in Sources */,
+				1891D26428C491D60078E34A /* SignupVC.swift in Sources */,
+				1891D29D28C5E71B0078E34A /* SkillsVC.swift in Sources */,
+				1891D28428C5C4CC0078E34A /* ApplicationEnums.swift in Sources */,
+				1891D29728C5DA5C0078E34A /* BaseTableViewCell.swift in Sources */,
+				18F30DB528C378B400662EB4 /* AlertManager.swift in Sources */,
+				1891D29F28C6092A0078E34A /* UploadFileResponse.swift in Sources */,
+				18F30D6B28C3629700662EB4 /* SceneDelegate.swift in Sources */,
+				18F30DB328C371E600662EB4 /* WebRequests.swift in Sources */,
+				18F30DC828C3880800662EB4 /* Users+CoreDataClass.swift in Sources */,
+				1871D01228C6536E00234876 /* ApplicationTableCell.swift in Sources */,
+				18F30DAC28C3640E00662EB4 /* DBManager.swift in Sources */,
+				1891D27B28C504460078E34A /* MyApplicationsVC.swift in Sources */,
+				1891D28828C5C95D0078E34A /* SelectButtonCell.swift in Sources */,
+				1891D26228C38B200078E34A /* DBExtension.swift in Sources */,
+				1891D27428C4BE740078E34A /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D7A28C3629A00662EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F30D8328C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F30D8428C3629A00662EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F30D8D28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITests.swift in Sources */,
+				18F30D8F28C3629A00662EB4 /* AlderadahCareerAssignmentSumitUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18F30D8028C3629A00662EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F30D6428C3629700662EB4 /* AlderadahCareerAssignmentSumit */;
+			targetProxy = 18F30D7F28C3629A00662EB4 /* PBXContainerItemProxy */;
+		};
+		18F30D8A28C3629A00662EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F30D6428C3629700662EB4 /* AlderadahCareerAssignmentSumit */;
+			targetProxy = 18F30D8928C3629A00662EB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18F30D6E28C3629700662EB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F30D6F28C3629700662EB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18F30D7628C3629900662EB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F30D7728C3629900662EB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18F30D9028C3629A00662EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18F30D9128C3629A00662EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18F30D9328C3629A00662EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8053C3D3A48FD32AA1FDD6D /* Pods-AlderadahCareerAssignmentSumit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlderadahCareerAssignmentSumit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18F30D9428C3629A00662EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F655A58A99932CB8142CBC7 /* Pods-AlderadahCareerAssignmentSumit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlderadahCareerAssignmentSumit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18F30D9628C3629A00662EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEEAA11238D111A27BE43EF /* Pods-AlderadahCareerAssignmentSumitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlderadahCareerAssignmentSumit.app/AlderadahCareerAssignmentSumit";
+			};
+			name = Debug;
+		};
+		18F30D9728C3629A00662EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0934AD5049EFD5E8D231904B /* Pods-AlderadahCareerAssignmentSumitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlderadahCareerAssignmentSumit.app/AlderadahCareerAssignmentSumit";
+			};
+			name = Release;
+		};
+		18F30D9928C3629A00662EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD5DF094887CCEC54F8C0B9 /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlderadahCareerAssignmentSumit;
+			};
+			name = Debug;
+		};
+		18F30D9A28C3629A00662EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFBEBDCED9B04572F895928A /* Pods-AlderadahCareerAssignmentSumit-AlderadahCareerAssignmentSumitUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumit.AlderadahCareerAssignmentSumitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlderadahCareerAssignmentSumit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18F30D6028C3629700662EB4 /* Build configuration list for PBXProject "AlderadahCareerAssignmentSumit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F30D9028C3629A00662EB4 /* Debug */,
+				18F30D9128C3629A00662EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F30D9228C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F30D9328C3629A00662EB4 /* Debug */,
+				18F30D9428C3629A00662EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F30D9528C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F30D9628C3629A00662EB4 /* Debug */,
+				18F30D9728C3629A00662EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F30D9828C3629A00662EB4 /* Build configuration list for PBXNativeTarget "AlderadahCareerAssignmentSumitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F30D9928C3629A00662EB4 /* Debug */,
+				18F30D9A28C3629A00662EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18F30D7128C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18F30D7228C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodel */,
+			);
+			currentVersion = 18F30D7228C3629700662EB4 /* AlderadahCareerAssignmentSumit.xcdatamodel */;
+			path = AlderadahCareerAssignmentSumit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 18F30D5D28C3629700662EB4 /* Project object */;
+}

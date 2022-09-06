@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-HY-eBC">
+                                <rect key="frame" x="72" y="44" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="rua-BH-jvt"/>
+                                    <constraint firstAttribute="width" secondItem="UnA-HY-eBC" secondAttribute="height" multiplier="1:1" id="sMN-lD-kBt"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-oS-yMZ">
+                                <rect key="frame" x="34" y="322" width="346" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UFu-CO-dDV"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SX7-a5-go3">
+                                <rect key="frame" x="34" y="376" width="346" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wX6-PM-YJB"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-oo-SIZ" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                <rect key="frame" x="34" y="450" width="346" height="37"/>
+                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign In">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="_signInButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLf-gg-gOK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-Q9-xQG">
+                                <rect key="frame" x="117.5" y="559" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lw-XS-1lM" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="588" width="99" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="171-vu-Jkd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Register">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fyB-ei-Hvp" kind="show" id="agh-LI-tG2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7Lw-XS-1lM" firstAttribute="top" secondItem="DFa-Q9-xQG" secondAttribute="bottom" constant="8" symbolic="YES" id="Cgc-ph-0nh"/>
+                            <constraint firstItem="DFa-Q9-xQG" firstAttribute="top" secondItem="gOa-oo-SIZ" secondAttribute="bottom" constant="72" id="FY7-R7-zt3"/>
+                            <constraint firstItem="Mmb-oS-yMZ" firstAttribute="top" secondItem="UnA-HY-eBC" secondAttribute="bottom" constant="8" symbolic="YES" id="PJm-bw-XTT"/>
+                            <constraint firstItem="SX7-a5-go3" firstAttribute="leading" secondItem="Mmb-oS-yMZ" secondAttribute="leading" id="S6D-GL-lNT"/>
+                            <constraint firstItem="gOa-oo-SIZ" firstAttribute="top" secondItem="SX7-a5-go3" secondAttribute="bottom" constant="40" id="Xvb-dZ-1UG"/>
+                            <constraint firstItem="DFa-Q9-xQG" firstAttribute="centerX" secondItem="UnA-HY-eBC" secondAttribute="centerX" id="ZQ7-h8-Crj"/>
+                            <constraint firstItem="SX7-a5-go3" firstAttribute="top" secondItem="Mmb-oS-yMZ" secondAttribute="bottom" constant="20" id="Zdf-8G-z0a"/>
+                            <constraint firstItem="Mmb-oS-yMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="bBf-hI-9KK"/>
+                            <constraint firstItem="UnA-HY-eBC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dFv-AK-q0a"/>
+                            <constraint firstItem="gOa-oo-SIZ" firstAttribute="leading" secondItem="Mmb-oS-yMZ" secondAttribute="leading" id="eVX-Co-5hQ"/>
+                            <constraint firstItem="Mmb-oS-yMZ" firstAttribute="centerX" secondItem="UnA-HY-eBC" secondAttribute="centerX" id="fs5-gQ-UtE"/>
+                            <constraint firstItem="SX7-a5-go3" firstAttribute="trailing" secondItem="Mmb-oS-yMZ" secondAttribute="trailing" id="gM9-Sn-wqd"/>
+                            <constraint firstItem="7Lw-XS-1lM" firstAttribute="centerX" secondItem="UnA-HY-eBC" secondAttribute="centerX" id="jg6-Be-0wp"/>
+                            <constraint firstItem="UnA-HY-eBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxy-Ts-62N"/>
+                            <constraint firstItem="gOa-oo-SIZ" firstAttribute="trailing" secondItem="Mmb-oS-yMZ" secondAttribute="trailing" id="wY9-Lb-77P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_emailTF" destination="Mmb-oS-yMZ" id="VNp-c3-MUb"/>
+                        <outlet property="_passwordTF" destination="SX7-a5-go3" id="5Y5-cZ-5mk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="85.714285714285708"/>
+        </scene>
+        <!--SignupVC-->
+        <scene sceneID="buo-0e-hhs">
+            <objects>
+                <viewController id="fyB-ei-Hvp" customClass="SignupVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58G-cs-haC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="OXM-nN-v4l">
+                                <rect key="frame" x="72" y="44" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="BGN-DA-Pe4"/>
+                                    <constraint firstAttribute="width" secondItem="OXM-nN-v4l" secondAttribute="height" multiplier="1:1" id="LXU-zL-sMe"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-LE-SZR">
+                                <rect key="frame" x="34" y="322" width="346" height="146"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zsb-UY-zXL">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="fyB-ei-Hvp" id="Efh-DD-0tO"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bt-ql-ztQ">
+                                        <rect key="frame" x="0.0" y="54" width="346" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="fyB-ei-Hvp" id="tC4-Sc-dqP"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiG-tI-Qij" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="346" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="User Type">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="_userTypeButtonPressedWithSender:" destination="fyB-ei-Hvp" eventType="touchUpInside" id="iuu-bi-gCr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtY-Ev-O8D" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                <rect key="frame" x="34" y="508" width="346" height="37"/>
+                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="_signUpButtonPressedWithSender:" destination="fyB-ei-Hvp" eventType="touchUpInside" id="A05-uC-hhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1K3-0N-cpl"/>
+                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OXM-nN-v4l" firstAttribute="top" secondItem="1K3-0N-cpl" secondAttribute="top" id="McH-e3-Eag"/>
+                            <constraint firstItem="gtY-Ev-O8D" firstAttribute="trailing" secondItem="WqU-LE-SZR" secondAttribute="trailing" id="dAG-TH-LpK"/>
+                            <constraint firstItem="WqU-LE-SZR" firstAttribute="top" secondItem="OXM-nN-v4l" secondAttribute="bottom" constant="8" symbolic="YES" id="lSF-8q-nfJ"/>
+                            <constraint firstItem="gtY-Ev-O8D" firstAttribute="leading" secondItem="1K3-0N-cpl" secondAttribute="leading" constant="34" id="mX6-4a-XHj"/>
+                            <constraint firstItem="gtY-Ev-O8D" firstAttribute="leading" secondItem="WqU-LE-SZR" secondAttribute="leading" id="ql3-uc-uwn"/>
+                            <constraint firstItem="gtY-Ev-O8D" firstAttribute="centerX" secondItem="58G-cs-haC" secondAttribute="centerX" id="tAv-wL-dFh"/>
+                            <constraint firstItem="gtY-Ev-O8D" firstAttribute="top" secondItem="WqU-LE-SZR" secondAttribute="bottom" constant="40" id="vaf-hS-fYZ"/>
+                            <constraint firstItem="OXM-nN-v4l" firstAttribute="centerX" secondItem="58G-cs-haC" secondAttribute="centerX" id="vng-DG-tcX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QJt-GQ-ke9"/>
+                    <connections>
+                        <outlet property="_emailTF" destination="zsb-UY-zXL" id="jg5-Ms-JwK"/>
+                        <outlet property="_passwordTF" destination="0bt-ql-ztQ" id="lMO-xC-kf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1l-Fp-hzT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="86"/>
+        </scene>
+        <!--My Applications-->
+        <scene sceneID="vdi-Dj-Xo8">
+            <objects>
+                <navigationController id="q5a-HM-wyg" customClass="BaseNavigationController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Applications" id="yJo-Vu-OPq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FsJ-HZ-b0v">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VHd-x7-Oeb" kind="relationship" relationship="rootViewController" id="Tq6-kk-Q7L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2c-WL-8c6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="1303"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="AU6-3e-H0f">
+            <objects>
+                <viewController id="Ixi-HF-CmT" customClass="DashboardVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Dq-EE-t3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f39-dv-FE1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="5e1-XB-iLc"/>
+                    <navigationItem key="navigationItem" id="8At-ar-bEM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNa-ct-ycd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="2625"/>
+        </scene>
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="saE-2b-qYT">
+            <objects>
+                <tabBarController storyboardIdentifier="AdminTabBarController" id="D9H-GZ-Ts8" customClass="BaseTabBarController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rCd-wS-k3j"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="TJ3-qN-uNn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular" stackedItemPositioning="automatic"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="q5a-HM-wyg" kind="relationship" relationship="viewControllers" id="VLS-PD-vzG"/>
+                        <segue destination="uqy-AO-bdE" kind="relationship" relationship="viewControllers" id="5nu-om-plX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBM-bC-wvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="2207"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="kjK-u5-kko">
+            <objects>
+                <viewController id="VHd-x7-Oeb" customClass="MyApplicationsVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smf-0g-J8n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i9o-m8-4Uz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VHd-x7-Oeb" id="uD2-Ro-6sy"/>
+                                    <outlet property="delegate" destination="VHd-x7-Oeb" id="xNq-jL-XOt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vP3-PA-PxV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="leading" secondItem="vP3-PA-PxV" secondAttribute="leading" id="1c9-p5-fUR"/>
+                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="top" secondItem="vP3-PA-PxV" secondAttribute="top" id="Mtq-Jg-V2f"/>
+                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="bottom" secondItem="vP3-PA-PxV" secondAttribute="bottom" id="Qod-lv-4sD"/>
+                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="trailing" secondItem="vP3-PA-PxV" secondAttribute="trailing" id="mbp-ab-UJ3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="zLk-AZ-79q"/>
+                    <navigationItem key="navigationItem" id="n7f-bK-1Qa"/>
+                    <connections>
+                        <outlet property="_tableView" destination="i9o-m8-4Uz" id="yzh-Bk-fOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yh-ey-lEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453.6231884057975" y="1301.7857142857142"/>
+        </scene>
+        <!--Apply Job-->
+        <scene sceneID="2rL-ER-qon">
+            <objects>
+                <navigationController id="fJy-FF-Arq" customClass="BaseNavigationController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Apply Job" id="nBn-wI-neO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7R-UQ-f8I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ync-10-Iiv" kind="relationship" relationship="rootViewController" id="QIr-mr-39L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHU-Sa-9ed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="583"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="6s4-Kj-aKW">
+            <objects>
+                <viewController id="ync-10-Iiv" customClass="ApplyJobVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Vc-bw-fN7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ya-Un-126" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="759" width="374" height="38"/>
+                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="nDo-0r-jn3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apply">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="applyForJobWithSender:" destination="ync-10-Iiv" eventType="touchUpInside" id="O4n-X3-qep"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jdl-hY-Ugc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextfieldCell" rowHeight="84" id="YmX-gx-ICl" customClass="TextfieldCell" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YmX-gx-ICl" id="lYa-9A-1yB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-U1-WA4">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g41-Rw-mg7">
+                                                    <rect key="frame" x="20" y="40" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="YmX-gx-ICl" id="e15-JW-viX"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="P3Y-U1-WA4" firstAttribute="top" secondItem="lYa-9A-1yB" secondAttribute="topMargin" id="Nxp-KC-Erk"/>
+                                                <constraint firstItem="g41-Rw-mg7" firstAttribute="leading" secondItem="P3Y-U1-WA4" secondAttribute="leading" id="PWZ-m5-7Qq"/>
+                                                <constraint firstItem="P3Y-U1-WA4" firstAttribute="trailing" secondItem="lYa-9A-1yB" secondAttribute="trailingMargin" id="Pcp-Gs-aXi"/>
+                                                <constraint firstItem="g41-Rw-mg7" firstAttribute="trailing" secondItem="P3Y-U1-WA4" secondAttribute="trailing" id="n2v-df-77e"/>
+                                                <constraint firstItem="g41-Rw-mg7" firstAttribute="top" secondItem="P3Y-U1-WA4" secondAttribute="bottom" constant="8" symbolic="YES" id="tP5-cn-YJh"/>
+                                                <constraint firstItem="P3Y-U1-WA4" firstAttribute="leading" secondItem="lYa-9A-1yB" secondAttribute="leadingMargin" id="xjK-Jb-idQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="_textField" destination="g41-Rw-mg7" id="HPl-pg-GFh"/>
+                                            <outlet property="_titleLabel" destination="P3Y-U1-WA4" id="tBO-VJ-j11"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SelectButtonCell" rowHeight="84" id="TZy-8e-lhC" customClass="SelectButtonCell" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZy-8e-lhC" id="Tnp-Wj-xqu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv6-CW-5qp">
+                                                    <rect key="frame" x="20" y="11" width="224" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKs-eE-BUM">
+                                                    <rect key="frame" x="20" y="52" width="374" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eu-Ot-0kL" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                                    <rect key="frame" x="252" y="11" width="142" height="31"/>
+                                                    <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="142" id="TAh-sO-boy"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="selectButtonPressedWithSender:" destination="TZy-8e-lhC" eventType="touchUpInside" id="wCM-Dr-22t"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nv6-CW-5qp" firstAttribute="leading" secondItem="tKs-eE-BUM" secondAttribute="leading" id="3Au-YG-YyG"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="trailing" secondItem="tKs-eE-BUM" secondAttribute="trailing" id="AD4-Fb-W6g"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="trailing" secondItem="Tnp-Wj-xqu" secondAttribute="trailingMargin" id="Ldi-Fd-BcF"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="top" secondItem="nv6-CW-5qp" secondAttribute="top" id="TbK-H8-bR9"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="leading" secondItem="nv6-CW-5qp" secondAttribute="trailing" constant="8" id="XqA-5T-Nr7"/>
+                                                <constraint firstItem="nv6-CW-5qp" firstAttribute="leading" secondItem="Tnp-Wj-xqu" secondAttribute="leadingMargin" id="bke-Lf-Xjx"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="top" secondItem="Tnp-Wj-xqu" secondAttribute="topMargin" id="kfT-sE-Ysr"/>
+                                                <constraint firstItem="2Eu-Ot-0kL" firstAttribute="bottom" secondItem="nv6-CW-5qp" secondAttribute="bottom" id="oSL-zA-7cy"/>
+                                                <constraint firstItem="tKs-eE-BUM" firstAttribute="top" secondItem="2Eu-Ot-0kL" secondAttribute="bottom" constant="10" id="wyv-Xu-TKh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="_infoLabel" destination="tKs-eE-BUM" id="lM9-Ah-zrt"/>
+                                            <outlet property="_selectButton" destination="2Eu-Ot-0kL" id="lGT-I7-RHU"/>
+                                            <outlet property="_titleLabel" destination="nv6-CW-5qp" id="0t1-e9-mBc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ync-10-Iiv" id="Yry-Ag-4UI"/>
+                                    <outlet property="delegate" destination="ync-10-Iiv" id="1W8-NI-MYd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x1d-EA-Srf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ya-Un-126" firstAttribute="leading" secondItem="x1d-EA-Srf" secondAttribute="leading" constant="20" id="1Jk-9h-5Vt"/>
+                            <constraint firstItem="x1d-EA-Srf" firstAttribute="trailing" secondItem="2Ya-Un-126" secondAttribute="trailing" constant="20" id="7ch-SQ-g7J"/>
+                            <constraint firstItem="2Ya-Un-126" firstAttribute="top" secondItem="Jdl-hY-Ugc" secondAttribute="bottom" constant="8" symbolic="YES" id="Htm-YZ-lbu"/>
+                            <constraint firstItem="x1d-EA-Srf" firstAttribute="bottom" secondItem="2Ya-Un-126" secondAttribute="bottom" constant="16" id="K0a-SF-7JH"/>
+                            <constraint firstItem="Jdl-hY-Ugc" firstAttribute="trailing" secondItem="x1d-EA-Srf" secondAttribute="trailing" id="Uf4-Qv-iVs"/>
+                            <constraint firstItem="Jdl-hY-Ugc" firstAttribute="leading" secondItem="x1d-EA-Srf" secondAttribute="leading" id="gyW-EW-ky5"/>
+                            <constraint firstItem="Jdl-hY-Ugc" firstAttribute="top" secondItem="x1d-EA-Srf" secondAttribute="top" id="oMA-KG-Odm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="7Ab-Tp-Bfh"/>
+                    <navigationItem key="navigationItem" id="Jd8-G4-Jif"/>
+                    <connections>
+                        <outlet property="_tableView" destination="Jdl-hY-Ugc" id="CPD-ZK-l55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYR-5B-Vhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453.6231884057975" y="582.58928571428567"/>
+        </scene>
+        <!--SkillsVC-->
+        <scene sceneID="wMy-7o-o2g">
+            <objects>
+                <viewController storyboardIdentifier="SkillsVC" id="Z4B-CO-DBe" customClass="SkillsVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZ3-UY-9ci">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-3d-yam">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z4B-CO-DBe" id="mh7-Wk-HTH"/>
+                                    <outlet property="delegate" destination="Z4B-CO-DBe" id="ymx-JV-wlP"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-yh-c43">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Skills" id="W5F-wU-vGR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="9Vi-2M-6G4">
+                                            <color key="tintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="doneButtonPressedWithSender:" destination="Z4B-CO-DBe" id="xaF-21-G3d"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ZfD-Gu-9ZT">
+                                            <color key="tintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="cancelButtonPressedWithSender:" destination="Z4B-CO-DBe" id="OLZ-wY-xZz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t66-1v-of6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Gr-3d-yam" firstAttribute="top" secondItem="4g2-yh-c43" secondAttribute="bottom" id="Afb-5H-QRs"/>
+                            <constraint firstItem="7Gr-3d-yam" firstAttribute="leading" secondItem="t66-1v-of6" secondAttribute="leading" id="WWr-rL-vls"/>
+                            <constraint firstItem="4g2-yh-c43" firstAttribute="top" secondItem="t66-1v-of6" secondAttribute="top" id="gIq-jm-Vbk"/>
+                            <constraint firstItem="4g2-yh-c43" firstAttribute="leading" secondItem="t66-1v-of6" secondAttribute="leading" id="k6L-YH-fFE"/>
+                            <constraint firstItem="t66-1v-of6" firstAttribute="trailing" secondItem="7Gr-3d-yam" secondAttribute="trailing" id="uqL-OJ-Huc"/>
+                            <constraint firstItem="4g2-yh-c43" firstAttribute="trailing" secondItem="t66-1v-of6" secondAttribute="trailing" id="vT2-za-5lo"/>
+                            <constraint firstItem="t66-1v-of6" firstAttribute="bottom" secondItem="7Gr-3d-yam" secondAttribute="bottom" id="zpr-c5-dIa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_tableView" destination="7Gr-3d-yam" id="z0Y-TI-gvn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amb-v0-s8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3266.666666666667" y="582.58928571428567"/>
+        </scene>
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="Ig4-ry-ftw">
+            <objects>
+                <tabBarController storyboardIdentifier="UserTabbarController" id="Tsq-HT-ajC" customClass="BaseTabBarController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VOq-MO-HaW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fJy-FF-Arq" kind="relationship" relationship="viewControllers" id="uY6-1s-Ne2"/>
+                        <segue destination="q5a-HM-wyg" kind="relationship" relationship="viewControllers" id="FUl-KC-k0z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4L-yW-bic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="843"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="Kp6-Qr-0OC">
+            <objects>
+                <navigationController id="uqy-AO-bdE" customClass="BaseNavigationController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="MDr-3W-Q25"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZd-JQ-rdq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ixi-HF-CmT" kind="relationship" relationship="rootViewController" id="UDj-BD-bOZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9m-1f-622" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="2625"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VLS-PD-vzG"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="bg" width="270" height="270"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
