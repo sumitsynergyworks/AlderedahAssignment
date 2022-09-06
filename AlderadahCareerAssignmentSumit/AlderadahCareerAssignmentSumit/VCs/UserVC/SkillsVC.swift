@@ -132,7 +132,7 @@ extension SkillsVC: UITableViewDelegate {
                     self._addSkillInSelectedSet(skill: skil)
                 }
             })
-            let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: {(action : UIAlertAction!) -> Void in })
+            let cancelAction = UIAlertAction(title: StringConstants.CANCEL, style: .destructive, handler: {(action : UIAlertAction!) -> Void in })
                 
             alertController.addAction(saveAction)
             alertController.addAction(cancelAction)

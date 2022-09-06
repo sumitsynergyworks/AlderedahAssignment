@@ -11,6 +11,17 @@ enum UserType:Int {
     case unknown = 0
     case admin
     case user
+    
+    func text() -> String {
+        switch self {
+        case .unknown:
+            return "Unknown"
+        case .admin:
+            return "Admin"
+        case .user:
+            return "User"
+        }
+    }
 }
 
 struct User: Codable {

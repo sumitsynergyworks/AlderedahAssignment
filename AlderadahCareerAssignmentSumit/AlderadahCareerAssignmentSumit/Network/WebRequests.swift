@@ -115,6 +115,11 @@ class WebRequests {
         WebRequestHelper.sendRequest(request: request, type: ApplicationList.self, completionHandler: completionHandler)
     }
     
+    static func getApplicationsWithouPage(filter: [String:Any]? = nil, completionHandler: @escaping (ApplicationList?, String?) -> Void) {
+        let request = WebRequestHelper._request(WebRequestURL.addApplication(), parameters: RequestParams.getApplicationWithouPageParams(filter: filter))
+        WebRequestHelper.sendRequest(request: request, type: ApplicationList.self, completionHandler: completionHandler)
+    }
+    
     static func deleteApplication(id: String, completionHandler: @escaping (Application?, String?) -> Void) {
         let request = WebRequestHelper._request(WebRequestURL.deleteApplication(id: id), method: .delete)
         WebRequestHelper.sendRequest(request: request, type: Application.self, completionHandler: completionHandler)

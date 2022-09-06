@@ -34,6 +34,8 @@
 		1891D29B28C5E1480078E34A /* JobApplications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29928C5E1480078E34A /* JobApplications+CoreDataProperties.swift */; };
 		1891D29D28C5E71B0078E34A /* SkillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29C28C5E71B0078E34A /* SkillsVC.swift */; };
 		1891D29F28C6092A0078E34A /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29E28C6092A0078E34A /* UploadFileResponse.swift */; };
+		18AA80F528C78CBF00885E36 /* SettingsProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80F428C78CBF00885E36 /* SettingsProfileTVC.swift */; };
+		18EDF4F028C7588E007E78E2 /* ProfileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDF4EF28C7588E007E78E2 /* ProfileDetailVC.swift */; };
 		18F30D6928C3629700662EB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6828C3629700662EB4 /* AppDelegate.swift */; };
 		18F30D6B28C3629700662EB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6A28C3629700662EB4 /* SceneDelegate.swift */; };
 		18F30D6D28C3629700662EB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6C28C3629700662EB4 /* LoginVC.swift */; };
@@ -102,6 +104,8 @@
 		1891D29928C5E1480078E34A /* JobApplications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JobApplications+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1891D29C28C5E71B0078E34A /* SkillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsVC.swift; sourceTree = "<group>"; };
 		1891D29E28C6092A0078E34A /* UploadFileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileResponse.swift; sourceTree = "<group>"; };
+		18AA80F428C78CBF00885E36 /* SettingsProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileTVC.swift; sourceTree = "<group>"; };
+		18EDF4EF28C7588E007E78E2 /* ProfileDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailVC.swift; sourceTree = "<group>"; };
 		18F30D6528C3629700662EB4 /* AlderadahCareerAssignmentSumit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlderadahCareerAssignmentSumit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F30D6828C3629700662EB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F30D6A28C3629700662EB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +227,16 @@
 			path = Applications;
 			sourceTree = "<group>";
 		};
+		18AA80F128C78B3400885E36 /* CommonVCs */ = {
+			isa = PBXGroup;
+			children = (
+				180868B328C70C9200A5DAE6 /* ViewResumeVC.swift */,
+				18EDF4EF28C7588E007E78E2 /* ProfileDetailVC.swift */,
+				18AA80F428C78CBF00885E36 /* SettingsProfileTVC.swift */,
+			);
+			path = CommonVCs;
+			sourceTree = "<group>";
+		};
 		18F30D5C28C3629700662EB4 = {
 			isa = PBXGroup;
 			children = (
@@ -288,9 +302,9 @@
 				1891D27C28C504AD0078E34A /* BaseControllers */,
 				18F30D6C28C3629700662EB4 /* LoginVC.swift */,
 				1891D26328C491D60078E34A /* SignupVC.swift */,
+				18AA80F128C78B3400885E36 /* CommonVCs */,
 				1891D27728C503B10078E34A /* UserVC */,
 				180868B028C6707500A5DAE6 /* AdminVC */,
-				180868B328C70C9200A5DAE6 /* ViewResumeVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -635,6 +649,7 @@
 				1891D27928C5042F0078E34A /* ApplyJobVC.swift in Sources */,
 				18F30DAE28C364AC00662EB4 /* StringConstants.swift in Sources */,
 				1891D26D28C4962F0078E34A /* ASView.swift in Sources */,
+				18EDF4F028C7588E007E78E2 /* ProfileDetailVC.swift in Sources */,
 				1891D26628C493F80078E34A /* BaseViewController.swift in Sources */,
 				18F30DC928C3880800662EB4 /* Users+CoreDataProperties.swift in Sources */,
 				1891D29B28C5E1480078E34A /* JobApplications+CoreDataProperties.swift in Sources */,
@@ -645,6 +660,7 @@
 				18F30DB528C378B400662EB4 /* AlertManager.swift in Sources */,
 				1891D29F28C6092A0078E34A /* UploadFileResponse.swift in Sources */,
 				18F30D6B28C3629700662EB4 /* SceneDelegate.swift in Sources */,
+				18AA80F528C78CBF00885E36 /* SettingsProfileTVC.swift in Sources */,
 				18F30DB328C371E600662EB4 /* WebRequests.swift in Sources */,
 				18F30DC828C3880800662EB4 /* Users+CoreDataClass.swift in Sources */,
 				1871D01228C6536E00234876 /* ApplicationTableCell.swift in Sources */,

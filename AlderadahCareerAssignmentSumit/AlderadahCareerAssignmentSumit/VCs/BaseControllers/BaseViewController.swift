@@ -20,6 +20,31 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - LOADERS
+    func showLoader(text: String = StringConstants.PLEASE_WAIT) {
+        
+        let alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
+
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = false
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func hideLoader() {
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = true
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
+    
+    // MARK: - KEYBOARD
     @objc func _keyboardWillShow(notification: NSNotification) {
         ParseKeyboardNotification(notification: notification, callBack: {
             (animationDuration: TimeInterval, keyboardHeigh: CGFloat, animationOption: UIView.AnimationCurve) -> Void in
@@ -68,16 +93,6 @@ class BaseViewController: UIViewController {
             self.view.frame = r;
         })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -93,6 +108,18 @@ class BaseViewController: UIViewController {
             }
         }
     }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
+    
 
 }
 

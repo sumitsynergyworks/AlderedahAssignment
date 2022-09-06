@@ -51,6 +51,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="_signInButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLf-gg-gOK"/>
@@ -172,6 +173,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="_signUpButtonPressedWithSender:" destination="fyB-ei-Hvp" eventType="touchUpInside" id="A05-uC-hhe"/>
@@ -209,7 +211,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FsJ-HZ-b0v">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="VHd-x7-Oeb" kind="relationship" relationship="rootViewController" id="Tq6-kk-Q7L"/>
@@ -224,32 +225,157 @@
             <objects>
                 <viewController id="Ixi-HF-CmT" customClass="DashboardVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Dq-EE-t3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tHd-pq-ErQ">
+                                <rect key="frame" x="20" y="96" width="374" height="280.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tUE-QE-hYb">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="130.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tG-AB-AIg" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="130.5"/>
+                                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Applied" subtitle="">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="_appliedPressed" destination="Ixi-HF-CmT" eventType="touchUpInside" id="eYt-L0-9wb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnZ-v1-SQX" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="130.5"/>
+                                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Rejected">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="_rejectedPressed" destination="Ixi-HF-CmT" eventType="touchUpInside" id="8Oq-yl-bLY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f3G-8B-dVx">
+                                        <rect key="frame" x="0.0" y="150.5" width="374" height="130"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7de-5n-TNb" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="130"/>
+                                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Selected">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="_selectedPressed" destination="Ixi-HF-CmT" eventType="touchUpInside" id="KT3-oW-1nd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVJ-S0-meF" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="130"/>
+                                                <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Best">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="_bestPressed" destination="Ixi-HF-CmT" eventType="touchUpInside" id="Nq2-u2-cq7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tHd-pq-ErQ" secondAttribute="height" multiplier="4:3" id="IIf-jq-8ud"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-ub-clX">
+                                <rect key="frame" x="0.0" y="384.5" width="414" height="428.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ixi-HF-CmT" id="z3q-52-Vcd"/>
+                                    <outlet property="delegate" destination="Ixi-HF-CmT" id="aK9-rX-Sps"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="f39-dv-FE1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tHd-pq-ErQ" firstAttribute="leading" secondItem="f39-dv-FE1" secondAttribute="leading" constant="20" id="5hP-xC-1gg"/>
+                            <constraint firstItem="hzX-ub-clX" firstAttribute="bottom" secondItem="f39-dv-FE1" secondAttribute="bottom" id="6vf-WT-DRN"/>
+                            <constraint firstItem="hzX-ub-clX" firstAttribute="leading" secondItem="f39-dv-FE1" secondAttribute="leading" id="O9n-QN-TyE"/>
+                            <constraint firstItem="hzX-ub-clX" firstAttribute="top" secondItem="tHd-pq-ErQ" secondAttribute="bottom" constant="8" symbolic="YES" id="PO7-pR-FiT"/>
+                            <constraint firstItem="tHd-pq-ErQ" firstAttribute="top" secondItem="f39-dv-FE1" secondAttribute="top" constant="8" id="bIf-46-QZH"/>
+                            <constraint firstItem="f39-dv-FE1" firstAttribute="trailing" secondItem="tHd-pq-ErQ" secondAttribute="trailing" constant="20" id="k8K-Mw-hXv"/>
+                            <constraint firstItem="hzX-ub-clX" firstAttribute="trailing" secondItem="f39-dv-FE1" secondAttribute="trailing" id="xSa-pO-YPv"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="5e1-XB-iLc"/>
                     <navigationItem key="navigationItem" id="8At-ar-bEM"/>
+                    <connections>
+                        <outlet property="_acceptedButton" destination="7de-5n-TNb" id="hcb-yd-V0V"/>
+                        <outlet property="_appliedButton" destination="7tG-AB-AIg" id="eDs-OT-rea"/>
+                        <outlet property="_bestButton" destination="HVJ-S0-meF" id="Mmn-ps-Qmf"/>
+                        <outlet property="_rejectedButton" destination="gnZ-v1-SQX" id="anc-RU-Jqc"/>
+                        <outlet property="_tableView" destination="hzX-ub-clX" id="ozB-Tq-wqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNa-ct-ycd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="2625"/>
+            <point key="canvasLocation" x="2728.985507246377" y="2625"/>
+        </scene>
+        <!--View ResumeVC-->
+        <scene sceneID="00f-UA-nZL">
+            <objects>
+                <viewController storyboardIdentifier="ViewResumeVC" id="ehk-dJ-PE7" customClass="ViewResumeVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ZO-y4-tlG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnd-y4-UnP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wph-Zc-UKH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wph-Zc-UKH" firstAttribute="trailing" secondItem="cnd-y4-UnP" secondAttribute="trailing" id="Hok-40-RrJ"/>
+                            <constraint firstItem="cnd-y4-UnP" firstAttribute="top" secondItem="Wph-Zc-UKH" secondAttribute="top" id="Xti-yv-zsK"/>
+                            <constraint firstItem="cnd-y4-UnP" firstAttribute="leading" secondItem="Wph-Zc-UKH" secondAttribute="leading" id="b1g-j9-0G0"/>
+                            <constraint firstItem="Wph-Zc-UKH" firstAttribute="bottom" secondItem="cnd-y4-UnP" secondAttribute="bottom" id="xO0-4m-n4g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="cnd-y4-UnP" id="hHa-ia-Q3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3m-yG-421" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3719" y="2625"/>
         </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="saE-2b-qYT">
             <objects>
                 <tabBarController storyboardIdentifier="AdminTabBarController" id="D9H-GZ-Ts8" customClass="BaseTabBarController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rCd-wS-k3j"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="TJ3-qN-uNn">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="TJ3-qN-uNn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular" stackedItemPositioning="automatic"/>
                     </tabBar>
                     <connections>
                         <segue destination="q5a-HM-wyg" kind="relationship" relationship="viewControllers" id="VLS-PD-vzG"/>
                         <segue destination="uqy-AO-bdE" kind="relationship" relationship="viewControllers" id="5nu-om-plX"/>
+                        <segue destination="Mmn-cN-aGJ" kind="relationship" relationship="viewControllers" id="89g-0j-t1O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBM-bC-wvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -261,23 +387,32 @@
             <objects>
                 <viewController id="VHd-x7-Oeb" customClass="MyApplicationsVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smf-0g-J8n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i9o-m8-4Uz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="VHd-x7-Oeb" id="uD2-Ro-6sy"/>
                                     <outlet property="delegate" destination="VHd-x7-Oeb" id="xNq-jL-XOt"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" id="pWi-eX-aeD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VHd-x7-Oeb" id="TxY-86-ejQ"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vP3-PA-PxV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i9o-m8-4Uz" firstAttribute="leading" secondItem="vP3-PA-PxV" secondAttribute="leading" id="1c9-p5-fUR"/>
-                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="top" secondItem="vP3-PA-PxV" secondAttribute="top" id="Mtq-Jg-V2f"/>
+                            <constraint firstItem="i9o-m8-4Uz" firstAttribute="top" secondItem="pWi-eX-aeD" secondAttribute="bottom" id="GrM-LU-w1h"/>
                             <constraint firstItem="i9o-m8-4Uz" firstAttribute="bottom" secondItem="vP3-PA-PxV" secondAttribute="bottom" id="Qod-lv-4sD"/>
                             <constraint firstItem="i9o-m8-4Uz" firstAttribute="trailing" secondItem="vP3-PA-PxV" secondAttribute="trailing" id="mbp-ab-UJ3"/>
                         </constraints>
@@ -285,12 +420,47 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="zLk-AZ-79q"/>
                     <navigationItem key="navigationItem" id="n7f-bK-1Qa"/>
                     <connections>
+                        <outlet property="_searchBar" destination="pWi-eX-aeD" id="EKG-pm-vvT"/>
                         <outlet property="_tableView" destination="i9o-m8-4Uz" id="yzh-Bk-fOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yh-ey-lEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453.6231884057975" y="1301.7857142857142"/>
+        </scene>
+        <!--Profile DetailVC-->
+        <scene sceneID="3eu-DV-9Q2">
+            <objects>
+                <viewController storyboardIdentifier="ProfileDetailVC" id="yH5-WH-4EV" customClass="ProfileDetailVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIF-HL-fJE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-oB-mRC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yH5-WH-4EV" id="M5w-GE-Fzo"/>
+                                    <outlet property="delegate" destination="yH5-WH-4EV" id="183-s2-rsc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EDf-x0-R3m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EDf-x0-R3m" firstAttribute="trailing" secondItem="NWo-oB-mRC" secondAttribute="trailing" id="Gtp-aZ-e7f"/>
+                            <constraint firstItem="EDf-x0-R3m" firstAttribute="bottom" secondItem="NWo-oB-mRC" secondAttribute="bottom" id="Ht1-zy-HN4"/>
+                            <constraint firstItem="NWo-oB-mRC" firstAttribute="leading" secondItem="EDf-x0-R3m" secondAttribute="leading" id="vHW-NZ-mm5"/>
+                            <constraint firstItem="NWo-oB-mRC" firstAttribute="top" secondItem="EDf-x0-R3m" secondAttribute="top" id="yZF-4h-qMr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_tableView" destination="NWo-oB-mRC" id="pOV-Z3-MIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNo-QE-wCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4516" y="1504"/>
         </scene>
         <!--Apply Job-->
         <scene sceneID="2rL-ER-qon">
@@ -300,11 +470,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7R-UQ-f8I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="ync-10-Iiv" kind="relationship" relationship="rootViewController" id="QIr-mr-39L"/>
@@ -331,13 +496,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Apply">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="applyForJobWithSender:" destination="ync-10-Iiv" eventType="touchUpInside" id="O4n-X3-qep"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jdl-hY-Ugc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="663"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextfieldCell" rowHeight="84" id="YmX-gx-ICl" customClass="TextfieldCell" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
@@ -389,7 +555,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKs-eE-BUM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKs-eE-BUM">
                                                     <rect key="frame" x="20" y="52" width="374" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="textColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -402,7 +568,9 @@
                                                         <constraint firstAttribute="width" constant="142" id="TAh-sO-boy"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="selectButtonPressedWithSender:" destination="TZy-8e-lhC" eventType="touchUpInside" id="wCM-Dr-22t"/>
                                                     </connections>
@@ -442,7 +610,7 @@
                             <constraint firstItem="x1d-EA-Srf" firstAttribute="bottom" secondItem="2Ya-Un-126" secondAttribute="bottom" constant="16" id="K0a-SF-7JH"/>
                             <constraint firstItem="Jdl-hY-Ugc" firstAttribute="trailing" secondItem="x1d-EA-Srf" secondAttribute="trailing" id="Uf4-Qv-iVs"/>
                             <constraint firstItem="Jdl-hY-Ugc" firstAttribute="leading" secondItem="x1d-EA-Srf" secondAttribute="leading" id="gyW-EW-ky5"/>
-                            <constraint firstItem="Jdl-hY-Ugc" firstAttribute="top" secondItem="x1d-EA-Srf" secondAttribute="top" id="oMA-KG-Odm"/>
+                            <constraint firstItem="Jdl-hY-Ugc" firstAttribute="top" secondItem="x1d-EA-Srf" secondAttribute="top" constant="4" id="oMA-KG-Odm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="7Ab-Tp-Bfh"/>
@@ -511,6 +679,42 @@
             </objects>
             <point key="canvasLocation" x="3266.666666666667" y="582.58928571428567"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="yFv-Ng-MnN">
+            <objects>
+                <tableViewController id="4Qb-gj-LZd" customClass="SettingsProfileTVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VzI-p1-eGe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="4Qb-gj-LZd" id="cLR-lX-7mf"/>
+                            <outlet property="delegate" destination="4Qb-gj-LZd" id="7Ys-OK-gT9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="nsA-Rp-BIH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtN-yO-y2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-451" y="1472"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="chO-pW-nug">
+            <objects>
+                <navigationController id="Mmn-cN-aGJ" customClass="BaseNavigationController" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="FUL-gN-XXg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iia-NM-j1Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Qb-gj-LZd" kind="relationship" relationship="rootViewController" id="Jl1-KU-Lme"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMt-Yo-ihj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1341" y="1472"/>
+        </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="Ig4-ry-ftw">
             <objects>
@@ -518,15 +722,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VOq-MO-HaW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <tabBarAppearance key="standardAppearance">
-                            <color key="selectionIndicatorTintColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </tabBarAppearance>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="fJy-FF-Arq" kind="relationship" relationship="viewControllers" id="uY6-1s-Ne2"/>
                         <segue destination="q5a-HM-wyg" kind="relationship" relationship="viewControllers" id="FUl-KC-k0z"/>
+                        <segue destination="Mmn-cN-aGJ" kind="relationship" relationship="viewControllers" id="2kv-ci-cSm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4L-yW-bic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -541,7 +743,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZd-JQ-rdq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Ixi-HF-CmT" kind="relationship" relationship="rootViewController" id="UDj-BD-bOZ"/>
@@ -553,9 +754,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VLS-PD-vzG"/>
+        <segue reference="2kv-ci-cSm"/>
+        <segue reference="FUl-KC-k0z"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="bg" width="270" height="270"/>
         <systemColor name="systemBackgroundColor">

@@ -17,8 +17,7 @@ class BaseNavigationController: UINavigationController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationBar.barTintColor = UIColor.ThemeBlueColor()
-//        UINavigationBar.appearance().backgroundColor = UIColor.ThemeBlueColor() // backgorund color with gradient
+        
     }
     
 

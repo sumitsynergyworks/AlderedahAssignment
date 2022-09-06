@@ -38,19 +38,24 @@ class ApplyJobVC: BaseViewController {
     @IBAction private func applyForJob(sender: Any?) {
         let keys = filledData.keys
         if keys.contains(.email) , keys.contains(.firstName), keys.contains(.lastName), keys.contains(.mobileNumber) {
+            showLoader()
+
             WebRequests.addApplication(dataInfo: filledData, resumeInfo: _uploadFileInfo, skills: _selectedSkill) { [weak self] application, errorString in
                 if let welf = self {
+                    
+                    welf.hideLoader()
+
                     guard let _ = application else {
                         guard let errorString = errorString else {
-                            AlertManager.showOKAlert(withTitle: "Error", withMessage: "Unknown error occurred", onViewController: welf)
+                            AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: StringConstants.UNKNOWN_ERROR, onViewController: welf)
                             return
                         }
-                        AlertManager.showOKAlert(withTitle: "Error", withMessage: errorString, onViewController: welf)
+                        AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: errorString, onViewController: welf)
 
                         return
                     }
                     
-                    AlertManager.showOKAlert(withTitle: "Success", withMessage: "Your Applicattion added successfully", onViewController: welf, returnBlock:  { clickedIndex in
+                    AlertManager.showOKAlert(withTitle: StringConstants.SUCCESS, withMessage: StringConstants.APPLICATION_ADDED_SUCCESS, onViewController: welf, returnBlock:  { clickedIndex in
                         welf.filledData.removeAll()
                         welf._selectedSkill.removeAll()
                         welf._resumeFileUrl = nil
@@ -62,7 +67,7 @@ class ApplyJobVC: BaseViewController {
                 }
             }
         } else {
-            AlertManager.showOKAlert(withTitle: "Require mandatory fields", withMessage: "Email, First Name, Last Name and mobile is mandatory to apply for this job", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.REQUIRE_MANDATORY_FIELDS, withMessage: "Email, First Name, Last Name and mobile is mandatory to apply for this job", onViewController: self)
         }
     }
     
@@ -74,7 +79,10 @@ class ApplyJobVC: BaseViewController {
                 self.present(vc, animated: true)
             }
         } else if fieldType == .resume {
-            let importMenu = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeRTFD), String(kUTTypeFlatRTFD), String(kUTTypeText), String(kUTTypePlainText), String(kUTTypeTXNTextAndMultimediaData)], in: .import)
+//            let importMenu = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeRTFD), String(kUTTypeFlatRTFD), String(kUTTypeText), String(kUTTypePlainText), String(kUTTypeTXNTextAndMultimediaData)], in: .import)
+            let supportedTypes: [UTType] = [UTType.plainText, UTType.pdf, UTType.text, UTType.rtf, UTType.rtfd, UTType(filenameExtension: "pages")!, UTType(filenameExtension: "docs")!, UTType(filenameExtension: "doc")!, UTType(filenameExtension: "docx")!]
+
+            let importMenu = UIDocumentPickerViewController.init(forOpeningContentTypes: supportedTypes)
            
             importMenu.delegate = self
             importMenu.allowsMultipleSelection = false
@@ -142,7 +150,7 @@ extension ApplyJobVC: UITableViewDataSource {
             if let txt = sender.text , txt.count > 0 {
                 
                 if !txt.isValidEmailID() || txt.count > 40 {
-                    AlertManager.showOKAlert(withTitle: "Improper Email", withMessage: "\(txt) is not proper email", onViewController: self)
+                    AlertManager.showOKAlert(withTitle: StringConstants.IMPROPER_ERROR, withMessage: "\(txt) is not proper email", onViewController: self)
                     sender.text = nil
                     return false
                 }
@@ -180,19 +188,22 @@ extension ApplyJobVC: UIDocumentPickerDelegate {
             let fileName = url.lastPathComponent
 //            let fileExtension = url.pathExtension
             let mimetype = url.mimeType()
-            
+            showLoader()
+
             WebRequests.uploadResumeFile(fileURL: url, fileData: data, fileName: fileName, mimeType: mimetype) {[weak self] uploadFile, errorStr in
                 if let welf = self {
+                    welf.hideLoader()
+
                     if let uploadFile = uploadFile {
                         welf.filledData[.resume] = fileName
                         welf._resumeFileUrl = url
                         welf._uploadFileInfo = uploadFile
                     } else {
                         guard let errorString = errorStr else {
-                            AlertManager.showOKAlert(withTitle: "Error", withMessage: "Unknown error occurred", onViewController: welf)
+                            AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: StringConstants.UNKNOWN_ERROR, onViewController: welf)
                             return
                         }
-                        AlertManager.showOKAlert(withTitle: "Error", withMessage: errorString, onViewController: welf)
+                        AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: errorString, onViewController: welf)
                     }
                 }
             }

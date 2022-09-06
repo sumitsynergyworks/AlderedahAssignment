@@ -112,6 +112,7 @@ class RequestParams {
         
         let (score, status) = Application.getResumeScore(dataInfo:dataInfo,  resumeInfo:resumeInfo, skills:skills)
         
+        params["status"] = status
         params["systemStatus"] = status
         params["jobId"] = "dw323"
         params["resumeScore"] = score
@@ -139,6 +140,17 @@ class RequestParams {
         
         if let searchFilter = searchFilter {
             params["search"] = searchFilter
+        }
+        
+        return params
+    }
+    
+    static func getApplicationWithouPageParams(filter: [String: Any]? = nil) -> ParameterDictionary {
+        var params = defaultParams()
+        if let filter = filter {
+            for (key, val) in filter {
+                params[key] = val
+            }
         }
         
         return params

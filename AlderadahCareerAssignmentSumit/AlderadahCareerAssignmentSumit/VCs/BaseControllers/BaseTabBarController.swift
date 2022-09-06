@@ -7,12 +7,22 @@
 
 import UIKit
 
-class BaseTabBarController: UITabBarController {
+class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController is UINavigationController {
+            let topVC = (viewController as! UINavigationController).topViewController
+            if (topVC is MyApplicationsVC && ASSharedClass.myApplicationsReceived) || topVC is DashboardVC {
+                topVC?.viewDidAppear(false)
+            }
+        }
     }
     
 

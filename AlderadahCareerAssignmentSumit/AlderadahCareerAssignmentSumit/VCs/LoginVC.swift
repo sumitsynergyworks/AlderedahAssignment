@@ -15,20 +15,26 @@ class LoginVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        _emailTF.text = "once@yopmail.com"
-        _passwordTF.text = "123123"
+//        _emailTF.text = "once@yopmail.com"
+//        _passwordTF.text = "123123"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ASSharedClass.myApplicationsReceived = false
+    }
+    
+    // MARK: - BUTTON ACTION
     @IBAction private func _signInButtonPressed(sender: Any) {
         self.resignAllKeyboard()
         
         guard let email = _emailTF.text , !email.isEmpty , email.isValidEmailID() else {
-            AlertManager.showOKAlert(withTitle: "Email Validation", withMessage: "Please fill valid email id", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.EMAIL_VALIDATION, withMessage: StringConstants.EMAIL_VALIDATION_ALERT, onViewController: self)
             return
         }
         
         guard let pswd = _passwordTF.text , !pswd.isEmpty else {
-            AlertManager.showOKAlert(withTitle: "Password Validation", withMessage: "Please fill password", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.PASSWORD_VALIDATION_ALERT, withMessage: StringConstants.PASSWORD_VALIDATION_ALERT, onViewController: self)
             return
         }
                 
@@ -38,10 +44,10 @@ class LoginVC: BaseViewController {
                     if pswd == existinguser.password {
                         welf._loginWithUserId(id: existinguser.id, dbuser: existinguser)
                     } else {
-                        AlertManager.showOKAlert(withTitle: "Wrong password", withMessage: "Password does not match", onViewController: self!)
+                        AlertManager.showOKAlert(withTitle: StringConstants.WRONG_PASSWORD, withMessage: StringConstants.PASSWORD_NOT_MATCHED, onViewController: self!)
                     }
                 } else {
-                    AlertManager.showActionSheetWithSimilarButtonsType(withTitle: "User Does not exist", withMessage: "Do you want to login with anonymous user?", buttonsTitles: ["Yes", "No"], onViewController: welf) { clickedIndex in
+                    AlertManager.showActionSheetWithSimilarButtonsType(withTitle: StringConstants.USER_NOT_EXIST, withMessage: StringConstants.LOGIN_ANONYMOUSLY, buttonsTitles: [StringConstants.YES, StringConstants.NO], onViewController: welf) { clickedIndex in
                         if clickedIndex == 0 {
                             welf._loginWithUserId(id: "2", dbuser: nil)
                         }
@@ -51,15 +57,18 @@ class LoginVC: BaseViewController {
         }
     }
     
+    // MARK: - PRIVATE FUNC
     private func _loginWithUserId(id:String, dbuser: Users?) {
+        showLoader()
         WebRequests.loginUserWith(id: id) { [weak self] user, error in
             if let welf = self {
+                welf.hideLoader()
                 guard let user = user else {
                     guard let errorString = error else {
-                        AlertManager.showOKAlert(withTitle: "Error", withMessage: "Unknown error occurred", onViewController: welf)
+                        AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: StringConstants.UNKNOWN_ERROR, onViewController: welf)
                         return
                     }
-                    AlertManager.showOKAlert(withTitle: "Error", withMessage: errorString, onViewController: welf)
+                    AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: errorString, onViewController: welf)
 
                     return
                 }
@@ -73,6 +82,7 @@ class LoginVC: BaseViewController {
     }
 }
 
+// MARK: - TEXTFIELD DELEGATE
 extension LoginVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -88,7 +98,7 @@ extension LoginVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == _emailTF {
             if let txt = textField.text , txt.count > 0, !txt.isValidEmailID() {
-                AlertManager.showOKAlert(withTitle: "Improper Email", withMessage: "\(txt) is not proper email", onViewController: self)
+                AlertManager.showOKAlert(withTitle: StringConstants.IMPROPER_ERROR, withMessage: "\(txt) is not proper email", onViewController: self)
                 textField.text = nil
             }
         }

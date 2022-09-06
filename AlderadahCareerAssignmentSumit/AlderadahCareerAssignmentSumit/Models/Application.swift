@@ -53,7 +53,35 @@ struct Application: Codable {
     let fileUniquifier: String?
     let systemStatus: String
     let skills: String?
+    let resumeFileName: String?
+    let createdAt: String
     
+    func fullName() -> String {
+        "\(firstName) \(lastName)"
+    }
+    
+    func skillsConcatenated() -> String {
+        if let skil = skills , let skilary = skil.toJSON() as? [String], skilary.count > 0 {
+            return skilary.joined(separator: ", ")
+        }
+        return StringConstants.EMPTY_MARK
+    }
+    
+    func statusString() -> String {
+        ApplicationStatus(rawValue: Int(status) ?? 1)?.stringName() ?? StringConstants.EMPTY_MARK
+    }
+    
+    func systemStatusString() -> String {
+        ApplicationStatus(rawValue: Int(systemStatus) ?? 1)?.stringName() ?? StringConstants.EMPTY_MARK
+    }
+    
+    func createdDate() -> String {
+        if let date = createdAt.fullDateFormatToDate() {
+            return date.toString()
+        }
+        return StringConstants.EMPTY_MARK
+    }
+
     static func getResumeScore(dataInfo: [ApplicationFields:String], resumeInfo: UploadFile?, skills: [String]) -> (Int, Int) {
         var score = 0
         for (key, _) in dataInfo {

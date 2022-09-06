@@ -14,7 +14,14 @@ class ApplicationTableCell: UITableViewCell {
     @IBOutlet private weak var _nameLabel: UILabel!
     @IBOutlet private weak var _jobId: UILabel!
     @IBOutlet private weak var _email: UILabel!
-    @IBOutlet private weak var _mobile: UILabel!
+    @IBOutlet private weak var _mobile: UILabel! {
+        didSet {
+            if ASSharedClass.isLoggedUserAdmin() {
+                let touchGesture = UITapGestureRecognizer.init(target: self, action: #selector(self._callTaped(_:)))
+                _mobile.addGestureRecognizer(touchGesture)
+            }
+        }
+    }
     @IBOutlet private weak var _score: UILabel!
     @IBOutlet private weak var _status: UILabel!
     @IBOutlet private weak var _systemStatus: UILabel!
@@ -25,14 +32,19 @@ class ApplicationTableCell: UITableViewCell {
     var deleteAction: ClickButtonCellAction?
     var editAction: ClickButtonCellAction?
     var changeStatusAction: ClickButtonCellAction?
+    var callAction: ClickButtonCellAction?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         if !ASSharedClass.isLoggedUserAdmin() {
-            _buttonStackView?.removeFromSuperview()
+            hideButtons()
         }
+    }
+    
+    func hideButtons() {
+        _buttonStackView?.removeFromSuperview()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,18 +55,25 @@ class ApplicationTableCell: UITableViewCell {
     
     func setInformation(application: Application) {
         
-        _nameLabel.text = "\(application.firstName) \(application.lastName)"
+        _nameLabel.text = application.fullName()
         _jobId.text = "\(application.jobId)"
         _email.text = "\(application.email)"
-        _mobile.text = "\(application.mobile)"
-        _score.text = "\(application.resumeScore)"
-        _status.text = ApplicationStatus(rawValue: Int(application.status) ?? 1)?.stringName()
-        _systemStatus.text = ApplicationStatus(rawValue: Int(application.systemStatus) ?? 1)?.stringName()
-        if let skil = application.skills , let skilary = skil.toJSON() as? [String], skilary.count > 0 {
-            _skills.text = skilary.joined(separator: ", ")
+        if ASSharedClass.isLoggedUserAdmin() {
+            let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.blue, NSAttributedString.Key.underlineStyle : NSNumber.init(value: 1), NSAttributedString.Key.underlineColor : UIColor.blue ]
+            let myAttrString = NSAttributedString(string: "\(application.mobile)", attributes: myAttribute)
+
+            // set attributed text on a UILabel
+            _mobile.attributedText = myAttrString
+
         } else {
-            _skills.text = "-"
-        }        
+            _mobile.text = "\(application.mobile)"
+        }
+        
+        _score.text = "\(application.resumeScore)"
+        _status.text = application.statusString()
+        _systemStatus.text = application.systemStatusString()
+        
+        _skills.text = application.skillsConcatenated()                
     }
     
     @IBAction private func _changeStatusButtonPressed(sender: Any?) {
@@ -72,6 +91,14 @@ class ApplicationTableCell: UITableViewCell {
     @IBAction private func _deleteButtonPressed(sender: Any?) {
         if let deleteAction = deleteAction {
             deleteAction(self, sender)
+        }
+    }
+    
+    @objc private func _callTaped(_ gesture: UITapGestureRecognizer) {
+        if gesture.state == .ended {
+            if let callAction = callAction {                            
+                callAction(self, gesture.view)
+            }
         }
     }
 }

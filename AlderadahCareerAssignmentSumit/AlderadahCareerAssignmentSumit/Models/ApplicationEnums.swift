@@ -92,8 +92,10 @@ enum ApplicationFields : Int, CaseIterable {
             return "mobile"
         case .email:
             return "email"
-        case .skills, .resume:
+        case .skills:
             return ""
+        case .resume:
+            return "resumeFileName"
         case .linkedInURL:
             return "linkedInURL"
         case .githubURL:

@@ -19,45 +19,48 @@ class SignupVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - BUTTON ACTION
     @IBAction private func _signUpButtonPressed(sender: Any) {
         
         resignAllKeyboard()
         
         guard let email = _emailTF.text , !email.isEmpty , email.isValidEmailID() else {
-            AlertManager.showOKAlert(withTitle: "Email Validation", withMessage: "Please fill valid email id", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.EMAIL_VALIDATION, withMessage: StringConstants.EMAIL_VALIDATION_ALERT, onViewController: self)
             return
         }
         
         guard let pswd = _passwordTF.text , !pswd.isEmpty else {
-            AlertManager.showOKAlert(withTitle: "Password Validation", withMessage: "Please fill password", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.PASSWORD_VALIDATION, withMessage: StringConstants.PASSWORD_VALIDATION_ALERT, onViewController: self)
             return
         }
         
         guard _userType > 0 , _userType < 3 else {
-            AlertManager.showOKAlert(withTitle: "User Type Validation", withMessage: "Please select which kind of user you are", onViewController: self)
+            AlertManager.showOKAlert(withTitle: StringConstants.USERTYPE_VALIDATION, withMessage: StringConstants.USERTYPE_VALIDATION_ALERT, onViewController: self)
             return
         }
         
         ASDBManager.fetchOneResult(t: Users.self, predicator: NSPredicate(format: "email == %@", email), sort: nil) { [weak self] existinguser, error in
             guard let welf = self , existinguser == nil else {
-                AlertManager.showOKAlert(withTitle: "Already exists", withMessage: "User with given email already exists", onViewController: self!)
+                AlertManager.showOKAlert(withTitle: StringConstants.ALREADY_EXISTS, withMessage: StringConstants.ALREADY_EMAIL_EXISTS, onViewController: self!)
 
                 return
             }
             
+            welf.showLoader()           
             WebRequests.signUpUser(email: email, password: pswd, usertype: welf._userType) { user, errorString in
+                welf.hideLoader()
+
                 guard let _ = user else {
                     guard let errorString = errorString else {
-                        AlertManager.showOKAlert(withTitle: "Error", withMessage: "Unknown error occurred", onViewController: welf)
+                        AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: StringConstants.UNKNOWN_ERROR, onViewController: welf)
                         return
                     }
-                    AlertManager.showOKAlert(withTitle: "Error", withMessage: errorString,
-                                             onViewController: welf)
+                    AlertManager.showOKAlert(withTitle: StringConstants.ERROR, withMessage: errorString, onViewController: welf)
                     
                     return
                 }
                 
-                AlertManager.showOKAlert(withTitle: "Success", withMessage: "User created successfully", onViewController: welf, returnBlock:  { [weak self] clickedIndex in
+                AlertManager.showOKAlert(withTitle: StringConstants.SUCCESS, withMessage: StringConstants.USER_CREATED, onViewController: welf, returnBlock:  { [weak self] clickedIndex in
                     DispatchQueue.main.async {
                         self?.dismiss(animated: true)
                     }
@@ -67,7 +70,7 @@ class SignupVC: BaseViewController {
     }
     
     @IBAction private func _userTypeButtonPressed(sender: ASButton) {
-        let buttons = ["Admin", "User"]
+        let buttons = [StringConstants.ADMIN, StringConstants.USER]
         AlertManager.showActionSheetWithSimilarButtonsType(withTitle: nil, withMessage: "You are?", buttonsTitles: buttons, onViewController: self) { [unowned self] clickedIndex in
             sender.setTitle(buttons[clickedIndex], for: .normal)
             self._userType = clickedIndex + 1
@@ -88,6 +91,7 @@ class SignupVC: BaseViewController {
 
 }
 
+// MARK: - TEXTFIELD DELEGATE
 extension SignupVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -103,7 +107,7 @@ extension SignupVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == _emailTF {
             if let txt = textField.text , txt.count > 0, !txt.isValidEmailID() {
-                AlertManager.showOKAlert(withTitle: "Improper Email", withMessage: "\(txt) is not proper email", onViewController: self)
+                AlertManager.showOKAlert(withTitle: StringConstants.IMPROPER_ERROR, withMessage: "\(txt) is not proper email", onViewController: self)
                 textField.text = nil
             }
         }
