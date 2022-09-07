@@ -79,7 +79,6 @@ class ApplyJobVC: BaseViewController {
                 self.present(vc, animated: true)
             }
         } else if fieldType == .resume {
-//            let importMenu = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeRTFD), String(kUTTypeFlatRTFD), String(kUTTypeText), String(kUTTypePlainText), String(kUTTypeTXNTextAndMultimediaData)], in: .import)
             let supportedTypes: [UTType] = [UTType.plainText, UTType.pdf, UTType.text, UTType.rtf, UTType.rtfd, UTType(filenameExtension: "pages")!, UTType(filenameExtension: "docs")!, UTType(filenameExtension: "doc")!, UTType(filenameExtension: "docx")!]
 
             let importMenu = UIDocumentPickerViewController.init(forOpeningContentTypes: supportedTypes)

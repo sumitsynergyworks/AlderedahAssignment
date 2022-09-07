@@ -35,6 +35,11 @@
 		1891D29D28C5E71B0078E34A /* SkillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29C28C5E71B0078E34A /* SkillsVC.swift */; };
 		1891D29F28C6092A0078E34A /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891D29E28C6092A0078E34A /* UploadFileResponse.swift */; };
 		18AA80F528C78CBF00885E36 /* SettingsProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80F428C78CBF00885E36 /* SettingsProfileTVC.swift */; };
+		18AA80F728C85B9E00885E36 /* LandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80F628C85B9E00885E36 /* LandingPageVC.swift */; };
+		18AA80F928C86DE600885E36 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80F828C86DE600885E36 /* NetworkMonitor.swift */; };
+		18AA80FB28C86F9500885E36 /* WebRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80FA28C86F9500885E36 /* WebRequestTests.swift */; };
+		18AA80FD28C873A000885E36 /* FieldValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA80FC28C873A000885E36 /* FieldValidations.swift */; };
+		18AA810128C87B1900885E36 /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18AA810028C87B1900885E36 /* test.pdf */; };
 		18EDF4F028C7588E007E78E2 /* ProfileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDF4EF28C7588E007E78E2 /* ProfileDetailVC.swift */; };
 		18F30D6928C3629700662EB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6828C3629700662EB4 /* AppDelegate.swift */; };
 		18F30D6B28C3629700662EB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F30D6A28C3629700662EB4 /* SceneDelegate.swift */; };
@@ -105,6 +110,11 @@
 		1891D29C28C5E71B0078E34A /* SkillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsVC.swift; sourceTree = "<group>"; };
 		1891D29E28C6092A0078E34A /* UploadFileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileResponse.swift; sourceTree = "<group>"; };
 		18AA80F428C78CBF00885E36 /* SettingsProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileTVC.swift; sourceTree = "<group>"; };
+		18AA80F628C85B9E00885E36 /* LandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageVC.swift; sourceTree = "<group>"; };
+		18AA80F828C86DE600885E36 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		18AA80FA28C86F9500885E36 /* WebRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestTests.swift; sourceTree = "<group>"; };
+		18AA80FC28C873A000885E36 /* FieldValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidations.swift; sourceTree = "<group>"; };
+		18AA810028C87B1900885E36 /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
 		18EDF4EF28C7588E007E78E2 /* ProfileDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailVC.swift; sourceTree = "<group>"; };
 		18F30D6528C3629700662EB4 /* AlderadahCareerAssignmentSumit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlderadahCareerAssignmentSumit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F30D6828C3629700662EB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -282,7 +292,10 @@
 		18F30D8128C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests */ = {
 			isa = PBXGroup;
 			children = (
+				18AA810028C87B1900885E36 /* test.pdf */,
 				18F30D8228C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift */,
+				18AA80FA28C86F9500885E36 /* WebRequestTests.swift */,
+				18AA80FC28C873A000885E36 /* FieldValidations.swift */,
 			);
 			path = AlderadahCareerAssignmentSumitTests;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 				18AA80F128C78B3400885E36 /* CommonVCs */,
 				1891D27728C503B10078E34A /* UserVC */,
 				180868B028C6707500A5DAE6 /* AdminVC */,
+				18AA80F628C85B9E00885E36 /* LandingPageVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -362,6 +376,7 @@
 		18F30DAF28C3678F00662EB4 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				18AA80F828C86DE600885E36 /* NetworkMonitor.swift */,
 				18F30DB028C367A800662EB4 /* NetworkHelper.swift */,
 			);
 			path = NetworkLayer;
@@ -510,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AA810128C87B1900885E36 /* test.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +655,7 @@
 				1891D29A28C5E1480078E34A /* JobApplications+CoreDataClass.swift in Sources */,
 				1891D26928C4942B0078E34A /* ASButton.swift in Sources */,
 				1891D27628C4FCC80078E34A /* ASShared.swift in Sources */,
+				18AA80F728C85B9E00885E36 /* LandingPageVC.swift in Sources */,
 				1891D28228C5BD660078E34A /* ColorScheme.swift in Sources */,
 				18F30D6928C3629700662EB4 /* AppDelegate.swift in Sources */,
 				1891D27128C49A400078E34A /* ParseKeyboardNotification.swift in Sources */,
@@ -668,6 +685,7 @@
 				1891D27B28C504460078E34A /* MyApplicationsVC.swift in Sources */,
 				1891D28828C5C95D0078E34A /* SelectButtonCell.swift in Sources */,
 				1891D26228C38B200078E34A /* DBExtension.swift in Sources */,
+				18AA80F928C86DE600885E36 /* NetworkMonitor.swift in Sources */,
 				1891D27428C4BE740078E34A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +694,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AA80FD28C873A000885E36 /* FieldValidations.swift in Sources */,
+				18AA80FB28C86F9500885E36 /* WebRequestTests.swift in Sources */,
 				18F30D8328C3629A00662EB4 /* AlderadahCareerAssignmentSumitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

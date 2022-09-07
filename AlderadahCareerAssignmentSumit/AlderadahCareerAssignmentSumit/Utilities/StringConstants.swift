@@ -55,6 +55,7 @@ import UniformTypeIdentifiers
     public static let baseURL = "https://6311dfd1f5cba498da87458b.mockapi.io/api/v1/"
     public static let signupURL = "createUser"
     public static let applications = "applications"
+    public static let uploadFileURL = "https://api.upload.io/v1/files/basic"
 }
 
 extension String {

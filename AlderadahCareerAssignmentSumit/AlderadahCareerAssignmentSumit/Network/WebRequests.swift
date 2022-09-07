@@ -30,7 +30,7 @@ class WebRequestURL {
     }
     
     static func uploadFileURL() -> String {
-        return "https://api.upload.io/v1/files/basic"
+        return StringConstants.uploadFileURL
     }
 }
 

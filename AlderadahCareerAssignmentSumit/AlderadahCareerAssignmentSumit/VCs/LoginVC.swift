@@ -9,8 +9,8 @@ import UIKit
 
 class LoginVC: BaseViewController {
     
-    @IBOutlet private weak var _emailTF: UITextField!
-    @IBOutlet private weak var _passwordTF: UITextField!
+    @IBOutlet weak var _emailTF: UITextField!
+    @IBOutlet weak var _passwordTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()

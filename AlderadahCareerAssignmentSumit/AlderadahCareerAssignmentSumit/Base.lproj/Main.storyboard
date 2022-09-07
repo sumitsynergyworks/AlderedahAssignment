@@ -1,30 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI4-XR-bPQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="F5c-Te-xKS">
+            <objects>
+                <navigationController id="lI4-XR-bPQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ita-Ey-nxm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fzk-JS-1JF" kind="relationship" relationship="rootViewController" id="As8-fG-xjS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jk-mE-8Jd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1768" y="86"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vNe-F5-AGA">
+            <objects>
+                <viewController id="fzk-JS-1JF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTG-Pc-QJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="career" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-nP-08c">
+                                <rect key="frame" x="0.0" y="196" width="414" height="243.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yA2-nP-08c" secondAttribute="height" multiplier="17:10" id="AVr-0k-94e"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are always looking for talents" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLh-zJ-8gX">
+                                <rect key="frame" x="20" y="459.5" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-wX-erB">
+                                <rect key="frame" x="20" y="529.5" width="374" height="101.5"/>
+                                <string key="text">At AlRaedah Finance, we are continuously seeking to employ passionate, professional and proficient individuals who can enhance, improve and develop our business operations for the benefit of our clients </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30h-uI-FE0" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
+                                <rect key="frame" x="147" y="651" width="120" height="31"/>
+                                <color key="backgroundColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="93W-j0-koz"/>
+                                    <constraint firstAttribute="height" constant="31" id="WNE-xd-0Rl"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apply Jobs"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="eTi-du-bsi"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-tU-mQL">
+                                <rect key="frame" x="158" y="90" width="98" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="C3t-Nl-DnJ"/>
+                                    <constraint firstAttribute="width" constant="98" id="H5F-yo-NbP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yQm-cS-02u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dLh-zJ-8gX" firstAttribute="top" secondItem="yA2-nP-08c" secondAttribute="bottom" constant="20" id="6XO-LM-zWk"/>
+                            <constraint firstItem="yA2-nP-08c" firstAttribute="leading" secondItem="yQm-cS-02u" secondAttribute="leading" id="7CT-ee-IU7"/>
+                            <constraint firstItem="30h-uI-FE0" firstAttribute="top" secondItem="JWg-wX-erB" secondAttribute="bottom" constant="20" id="JU0-oe-GLq"/>
+                            <constraint firstItem="kMi-tU-mQL" firstAttribute="centerX" secondItem="aTG-Pc-QJZ" secondAttribute="centerX" id="KU5-Y4-Ase"/>
+                            <constraint firstAttribute="trailing" secondItem="JWg-wX-erB" secondAttribute="trailing" constant="20" id="Kif-n1-rnv"/>
+                            <constraint firstItem="kMi-tU-mQL" firstAttribute="top" secondItem="yQm-cS-02u" secondAttribute="top" constant="2" id="ROY-s9-erY"/>
+                            <constraint firstAttribute="trailing" secondItem="dLh-zJ-8gX" secondAttribute="trailing" constant="20" id="TM3-dH-Qyn"/>
+                            <constraint firstItem="yQm-cS-02u" firstAttribute="trailing" secondItem="yA2-nP-08c" secondAttribute="trailing" id="aKF-qb-iTp"/>
+                            <constraint firstItem="dLh-zJ-8gX" firstAttribute="centerX" secondItem="aTG-Pc-QJZ" secondAttribute="centerX" id="cpx-sP-YXA"/>
+                            <constraint firstItem="yA2-nP-08c" firstAttribute="top" secondItem="kMi-tU-mQL" secondAttribute="bottom" constant="8" symbolic="YES" id="dro-y6-QMf"/>
+                            <constraint firstItem="30h-uI-FE0" firstAttribute="centerX" secondItem="aTG-Pc-QJZ" secondAttribute="centerX" id="eMo-e0-q9Y"/>
+                            <constraint firstItem="JWg-wX-erB" firstAttribute="centerX" secondItem="aTG-Pc-QJZ" secondAttribute="centerX" id="pFC-He-fZH"/>
+                            <constraint firstItem="dLh-zJ-8gX" firstAttribute="leading" secondItem="yQm-cS-02u" secondAttribute="leading" constant="20" id="tzm-CJ-NqS"/>
+                            <constraint firstItem="JWg-wX-erB" firstAttribute="top" secondItem="dLh-zJ-8gX" secondAttribute="bottom" constant="10" id="vMg-ug-ZA8"/>
+                            <constraint firstItem="yA2-nP-08c" firstAttribute="centerX" secondItem="aTG-Pc-QJZ" secondAttribute="centerX" id="vwZ-Qi-k8E"/>
+                            <constraint firstItem="JWg-wX-erB" firstAttribute="leading" secondItem="yQm-cS-02u" secondAttribute="leading" constant="20" id="wl3-zh-VoZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3d6-zc-OqK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csk-Zd-Szu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959.4202898550725" y="85.714285714285708"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-HY-eBC">
-                                <rect key="frame" x="72" y="44" width="270" height="270"/>
+                                <rect key="frame" x="72" y="88" width="270" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="rua-BH-jvt"/>
                                     <constraint firstAttribute="width" secondItem="UnA-HY-eBC" secondAttribute="height" multiplier="1:1" id="sMN-lD-kBt"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-oS-yMZ">
-                                <rect key="frame" x="34" y="322" width="346" height="34"/>
+                                <rect key="frame" x="34" y="366" width="346" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                 <connections>
@@ -32,7 +125,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SX7-a5-go3">
-                                <rect key="frame" x="34" y="376" width="346" height="34"/>
+                                <rect key="frame" x="34" y="420" width="346" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
@@ -40,7 +133,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-oo-SIZ" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
-                                <rect key="frame" x="34" y="450" width="346" height="37"/>
+                                <rect key="frame" x="34" y="494" width="346" height="37"/>
                                 <color key="backgroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -58,13 +151,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-Q9-xQG">
-                                <rect key="frame" x="117.5" y="559" width="179" height="21"/>
+                                <rect key="frame" x="117.5" y="603" width="179" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lw-XS-1lM" customClass="ASButton" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="588" width="99" height="37"/>
+                                <rect key="frame" x="157.5" y="632" width="99" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="171-vu-Jkd"/>
                                 </constraints>
@@ -80,7 +173,7 @@
                                     <color key="baseForegroundColor" red="0.7815517783" green="0.40821319820000002" blue="0.034949138759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fyB-ei-Hvp" kind="show" id="agh-LI-tG2"/>
+                                    <segue destination="fyB-ei-Hvp" kind="presentation" id="oud-pt-Y3i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,6 +197,7 @@
                             <constraint firstItem="gOa-oo-SIZ" firstAttribute="trailing" secondItem="Mmb-oS-yMZ" secondAttribute="trailing" id="wY9-Lb-77P"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bfK-1d-shZ"/>
                     <connections>
                         <outlet property="_emailTF" destination="Mmb-oS-yMZ" id="VNp-c3-MUb"/>
                         <outlet property="_passwordTF" destination="SX7-a5-go3" id="5Y5-cZ-5mk"/>
@@ -116,7 +210,7 @@
         <!--SignupVC-->
         <scene sceneID="buo-0e-hhs">
             <objects>
-                <viewController id="fyB-ei-Hvp" customClass="SignupVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" id="fyB-ei-Hvp" customClass="SignupVC" customModule="AlderadahCareerAssignmentSumit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="58G-cs-haC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -760,6 +854,10 @@
     <color key="tintColor" red="0.09865546972" green="0.25349453090000001" blue="0.52159541850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="bg" width="270" height="270"/>
+        <image name="career" width="444.5" height="296"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
