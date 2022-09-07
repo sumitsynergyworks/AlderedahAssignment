@@ -83,6 +83,14 @@ class ProfileDetailVC: BaseViewController {
     */
     
     // MARK: - PRIVATE FUNC
+    private func _openLink(string: String) {
+        if let url = URL.init(string: string) {
+            if ASSharedApplication.canOpenURL(url) {
+                ASSharedApplication.open(url)
+            }
+        }
+    }
+    
     private func _viewResumeApplication() {
         if let vc = StoryboardControllerIds.appStoryboard().instantiateViewController(withIdentifier: ViewResumeVC.identifier()) as? ViewResumeVC , let filePath = application.resumeFilePath , !filePath.isEmpty {
             vc.filePath = filePath
@@ -192,10 +200,31 @@ extension ProfileDetailVC: UITableViewDataSource {
             cell?.detailTextLabel?.text = application.resumeScore
         case .LinkedInURL:
             cell?.detailTextLabel?.text = application.linkedInURL ?? StringConstants.EMPTY_MARK
+            if let resumefile = application.linkedInURL , resumefile.count > 0 {
+                let button: ASButton = ASButton.getOne(rect: CGRect.init(x: 0, y: 0, width: 40, height: 40), image: UIImage.init(named: "link"))
+                button.facilitateTapBlock({[unowned self] button in
+                    self._openLink(string: resumefile)
+                }, forEvent: .touchUpInside)
+                cell?.accessoryView = button
+            }
         case .GitHubURL:
             cell?.detailTextLabel?.text = application.githubURL ?? StringConstants.EMPTY_MARK
+            if let resumefile = application.githubURL , resumefile.count > 0 {
+                let button: ASButton = ASButton.getOne(rect: CGRect.init(x: 0, y: 0, width: 40, height: 40), image: UIImage.init(named: "link"))
+                button.facilitateTapBlock({[unowned self] button in
+                    self._openLink(string: resumefile)
+                }, forEvent: .touchUpInside)
+                cell?.accessoryView = button
+            }
         case .OtherURL:
             cell?.detailTextLabel?.text = application.otherURL ?? StringConstants.EMPTY_MARK
+            if let resumefile = application.otherURL , resumefile.count > 0 {
+                let button: ASButton = ASButton.getOne(rect: CGRect.init(x: 0, y: 0, width: 40, height: 40), image: UIImage.init(named: "link"))
+                button.facilitateTapBlock({[unowned self] button in
+                    self._openLink(string: resumefile)
+                }, forEvent: .touchUpInside)
+                cell?.accessoryView = button
+            }
         case .AppliedOn:
             cell?.detailTextLabel?.text = application.createdDate()
         }
