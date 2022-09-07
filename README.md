@@ -82,7 +82,7 @@ Every profie or application that user put is given score and system applies his 
     - Utilities
 
 ## Assessment Overview: The assessment will test your frontend skills in building an application form for hiring [Career Page] with the following features : 
-###Part 1: 
+### Part 1: 
     - _Ability to see all applications with the ability to change the status for applications between [ Created, Completed, Accepted, Rejected] (Admin Panel )_
         Done when login throug admin user
         
