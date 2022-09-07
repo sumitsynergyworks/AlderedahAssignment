@@ -70,6 +70,12 @@ class FieldValidations: XCTestCase {
         XCTAssertFalse(invalidURL.isValidURL(), "Validating wrong URL")
 
     }
+    
+    func testServerDateStringConvertingToDate() throws {
+        let serverDateStr = "2022-09-04T04:19:23.769Z"
+        
+        XCTAssertNotNil(serverDateStr.fullDateFormatToDate, "Not converting successfully")
+    }
 
     func testExample() throws {
         // This is an example of a functional test case.
